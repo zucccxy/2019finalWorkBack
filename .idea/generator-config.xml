@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistentConfig">
+    <option name="historyConfigList">
+      <map>
+        <entry key="article">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ArticleDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Article" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="article" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="article_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="article" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="article_category">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ArticleCategoryDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ArticleCategory" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="article_category" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="article_category_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="article_category" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="category">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CategoryDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Category" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="category" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="category_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="category" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="collection">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CollectionDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Collection" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="collection" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="collection_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="collection" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="comment">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CommentDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Comment" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="comment" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="comment_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="comment" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="feedback">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="FeedbackDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Feedback" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="feedback" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="feedback_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="feedback" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="news">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="NewsDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="News" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="news" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="news_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="news" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="replay">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ReplayDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Replay" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="replay" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="reply_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="replay" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="sign">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="SignDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Sign" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="sign" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="sign_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="sign" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="user">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="UserDao" />
+              <option name="daoPackage" value="org.lis_dao" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="User" />
+              <option name="modelPackage" value="org.lis_entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/lis_entity" />
+              <option name="name" value="user" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="offsetLimit" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="user_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="user" />
+              <option name="useExample" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/java" />
+              <option name="xmlPackage" value="org.lis_dao" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/lis_dao" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="users">
+      <map>
+        <entry key="jdbc:mysql://localhost:3306/my_blog">
+          <value>
+            <User>
+              <option name="username" value="root" />
+            </User>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,6 @@
+2018/09/18-11:32 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on szdeMacBook-Pro.local with PID 6816 (/Users/sz/yunlis/lis_api/target/classes started by sz in /Users/sz/yunlis)
+2018/09/18-11:32 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/09/18-11:32 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/09/18-11:32 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/09/18-11:32 [restartedMain] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018/09/18-11:32 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 24.741 seconds (JVM running for 30.906)
