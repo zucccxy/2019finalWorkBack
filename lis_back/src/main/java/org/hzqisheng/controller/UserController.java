@@ -2,6 +2,9 @@ package org.hzqisheng.controller;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.lis_entity.FeedbackResult;
+import org.lis_entity.Sign;
+import org.lis_entity.SignResult;
 import org.lis_entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.enums.ResponseCodeEnum;
@@ -17,6 +20,7 @@ import org.util.response.ResponseDataUtil;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -103,4 +107,85 @@ public class UserController {
                     build();
     }
 
+    /**
+     * 用户签到列表
+     * @param pageIndex
+     * @param pageSize
+     * @param username
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    @RequestMapping(value="signList",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> findSignList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
+                                            String username, Date startTime,Date endTime) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<SignResult> signList = userService.findSignList(username, startTime, endTime);
+        Page<SignResult> page = (Page<SignResult>) signList;
+        log.info("用户签到列表查询------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", signList).
+                putData("pageIndex", pageIndex).
+                putData("pageSize", pageSize).
+                putData("totalCount", page.getTotal()).
+                build();
+    }
+
+    /**
+     * 删除签到记录
+     * @param signId
+     * @return
+     */
+    @RequestMapping(value="delSign",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> delSign(Long signId){
+        userService.delSign(signId);
+        log.info("删除标签------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
+    /**
+     * 获取反馈列表
+     * @param pageIndex
+     * @param pageSize
+     * @param username
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    @RequestMapping(value="feedbackList",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> findFeedbackList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
+                                            String username, Date startTime,Date endTime) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<FeedbackResult> feedbackList = userService.findFeedbackList(username, startTime, endTime);
+        Page<FeedbackResult> page = (Page<FeedbackResult>) feedbackList;
+        log.info("用户签到列表查询------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", feedbackList).
+                putData("pageIndex", pageIndex).
+                putData("pageSize", pageSize).
+                putData("totalCount", page.getTotal()).
+                build();
+    }
+
+    /**
+     * 删除反馈
+     * @param feedbackId
+     * @return
+     */
+    @RequestMapping(value="delFeedback",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> delFeedback(Long feedbackId){
+        userService.delFeedback(feedbackId);
+        log.info("删除反馈------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
 }

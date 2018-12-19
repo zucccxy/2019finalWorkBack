@@ -1,7 +1,11 @@
 package org.lis_dao;
 
+import org.lis_entity.FeedbackResult;
+import org.lis_entity.SignResult;
 import org.lis_entity.User;
 import org.lis_entity.UserExample;
+
+import java.util.HashMap;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -27,4 +31,7 @@ public interface UserDao {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    List<SignResult> selectNameAndSign(HashMap map);
+    List<FeedbackResult> selectByFeedbackCondition(HashMap map);
 }

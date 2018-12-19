@@ -1,7 +1,10 @@
 package org.hzqisheng.service;
 
+import org.lis_entity.FeedbackResult;
+import org.lis_entity.SignResult;
 import org.lis_entity.User;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,6 +35,41 @@ public interface UserService {
      */
     public  boolean addUser(User user);
 
+    /**
+     * 修改用户
+     * @param user
+     * @return
+     */
     public  boolean updateUser(User user);
+    /**
+     * 获取签到列表
+     * @param username
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    public List<SignResult>  findSignList(String username, Date startTime, Date endTime);
 
+    /**
+     * 删除签到记录
+     * @param signId
+     * @return
+     */
+    public boolean delSign(Long signId);
+
+    /**
+     * 获取反馈列表
+     * @param username
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    public List<FeedbackResult> findFeedbackList(String username,Date startTime,Date endTime);
+
+    /**
+     * 删除反馈记录
+     * @param feedbackId
+     * @return
+     */
+    public boolean  delFeedback(Long feedbackId);
 }
