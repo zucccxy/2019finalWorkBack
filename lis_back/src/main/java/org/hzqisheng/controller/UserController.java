@@ -49,17 +49,17 @@ public class UserController {
     @ResponseBody
     public Map<String, Object> findUserList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
                                              String userAccount, String userName, Integer userLevel) {
-        PageHelper.startPage(pageIndex, pageSize);
-        List<User> userList = userService.findUserList(userAccount, userName, userLevel);
-        Page<User> page = (Page<User>) userList;
-        log.info("用户列表查询------------------------------------");
-        return ResponseDataUtil.
-                ok().
-                putData("dataList", userList).
-                putData("pageIndex", pageIndex).
-                putData("pageSize", pageSize).
-                putData("totalCount", page.getTotal()).
-                build();
+            PageHelper.startPage(pageIndex, pageSize);
+            List<User> userList = userService.findUserList(userAccount, userName, userLevel);
+            Page<User> page = (Page<User>) userList;
+            log.info("用户列表查询------------------------------------");
+            return ResponseDataUtil.
+                    ok().
+                    putData("dataList", userList).
+                    putData("pageIndex", pageIndex).
+                    putData("pageSize", pageSize).
+                    putData("totalCount", page.getTotal()).
+                    build();
     }
 
     /**

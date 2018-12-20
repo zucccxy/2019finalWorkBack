@@ -230,7 +230,7 @@
    from  user join sign on user.user_id =sign.user_id
   <where>
    <if test="username!=null and username!=''">
-         username like  #{username}
+         username like  "%"#{username}"%"
    </if>
     <if test="startTime!=null">
       AND  sign_time &gt;=  #{startTime}
@@ -245,7 +245,7 @@
      from  user join feedback on user.user_id = feedback.user_id
      <where>
        <if test="username!=null and username!=''">
-         username like  #{username}
+         username like  "%"#{username}"%"
        </if>
      <if test="startTime!=null">
        AND  creat_time &gt;=  #{startTime}
