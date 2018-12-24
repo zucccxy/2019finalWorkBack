@@ -94,7 +94,6 @@ public class AdminController {
         return ResponseDataUtil.
                 ok().
                 putData("data", admin).
-
                 build();
     }
 
