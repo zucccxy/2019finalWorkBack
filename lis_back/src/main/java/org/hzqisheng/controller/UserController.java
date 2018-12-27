@@ -90,6 +90,11 @@ public class UserController {
                 build();
     }
 
+    /**
+     * 修改用户信息
+     * @param user
+     * @return
+     */
     @RequestMapping(value = "updateUser", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> updateAdmin(User user) {

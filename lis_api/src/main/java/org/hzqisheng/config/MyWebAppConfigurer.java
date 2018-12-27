@@ -20,8 +20,9 @@ public class MyWebAppConfigurer
     public void addInterceptors(InterceptorRegistry registry) {
         // 多个拦截器组成一个拦截器链
         // addPathPatterns 用于添加拦截规则
-        // excludePathPatterns 用户排除拦截,excludePathPatterns("/login", "/register") 表示除了登陆与注册之外，因为登陆注册不需要登陆也可以访问
-       registry.addInterceptor(myInterceptor).addPathPatterns("/**").excludePathPatterns("/api/user/userLogIn","/api/user/userRegister");
+        // excludePathPatterns 用户排除拦截,excludePathPatterns("/api/user/userLogIn", "/api/user/userRegister") 表示除了登陆与注册之外，因为登陆注册不需要登陆也可以访问
+       registry.addInterceptor(myInterceptor).addPathPatterns("/**").excludePathPatterns("/api/user/userLogIn",
+               "/api/user/userRegister","/api/user/submitFeedback","/api/article/categoryList");
        super.addInterceptors(registry);
     }
 

@@ -4,3 +4,668 @@
 2018/09/18-11:32 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
 2018/09/18-11:32 [restartedMain] WARN  org.springframework.boot.autoconfigure.thymeleaf.AbstractTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
 2018/09/18-11:32 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 24.741 seconds (JVM running for 30.906)
+2018/12/27-09:13 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 14800 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:13 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:13 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:13 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:13 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 8.989 seconds (JVM running for 11.455)
+2018/12/27-09:28 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 3840 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:28 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:28 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:28 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:29 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 7.777 seconds (JVM running for 9.666)
+2018/12/27-09:30 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 6660 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:30 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:30 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:30 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:30 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 9.254 seconds (JVM running for 11.597)
+2018/12/27-09:31 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 6660 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:31 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:31 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:31 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 8364 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:31 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:31 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:31 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:31 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 10.429 seconds (JVM running for 12.244)
+2018/12/27-09:36 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10092 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:36 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:36 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:36 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:36 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 8.167 seconds (JVM running for 10.2)
+2018/12/27-09:42 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 2452 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:42 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:42 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:42 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:42 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 7.767 seconds (JVM running for 10.487)
+2018/12/27-09:42 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 2268 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:42 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:42 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:43 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:43 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 12.474 seconds (JVM running for 15.411)
+2018/12/27-09:45 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 1144 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:45 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:45 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:45 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:45 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 7.536 seconds (JVM running for 9.346)
+2018/12/27-09:55 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 13368 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:55 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:55 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:55 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:56 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 13.839 seconds (JVM running for 17.843)
+2018/12/27-09:56 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 7200 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-09:56 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-09:56 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-09:56 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-09:56 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 6.784 seconds (JVM running for 8.694)
+2018/12/27-09:57 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-09:57 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-09:57 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-09:57 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-09:59 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-09:59 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-09:59 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-09:59 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:02 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:02 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:02 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:02 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:05 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:05 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:05 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:05 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:10 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:10 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:10 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:10 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:11 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:11 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:11 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:11 [http-nio-12080-exec-10] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:20 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:20 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:20 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:20 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:24 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:24 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:24 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:24 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:24 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:24 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:24 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:24 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:29 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:29 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:29 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:29 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:31 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:31 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:31 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:31 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:32 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:32 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:32 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:32 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:32 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:32 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:32 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:32 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:33 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:33 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:33 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:33 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:35 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 管理员登录....................
+2018/12/27-10:40 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 14992 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-10:40 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-10:40 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-10:40 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-10:40 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 11.626 seconds (JVM running for 14.488)
+2018/12/27-10:55 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:55 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:55 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:55 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 管理员登录------------------------------------
+2018/12/27-10:56 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:56 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:56 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:56 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 管理员登录------------------------------------
+2018/12/27-10:57 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-10:57 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-10:57 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-10:57 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.UserController- 管理员登录------------------------------------
+2018/12/27-10:59 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 13692 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-10:59 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-10:59 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-10:59 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-10:59 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 9.221 seconds (JVM running for 11.335)
+2018/12/27-11:00 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:00 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:00 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:00 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:00 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.UserController- User [Hash = 70454689, userId=3, username=cxf10, avatarurl=http://bmob-cdn-15555.b0.upaiyun.com/2018/01/09/e155570340eb843b80af3a7625c39542.jpg, authority=1, password=123456, account=123456, serialVersionUID=1]------------------------------------
+2018/12/27-11:02 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:02 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:02 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:02 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:02 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- User [Hash = 70454689, userId=3, username=cxf10, avatarurl=http://bmob-cdn-15555.b0.upaiyun.com/2018/01/09/e155570340eb843b80af3a7625c39542.jpg, authority=1, password=123456, account=123456, serialVersionUID=1]------------------------------------
+2018/12/27-11:04 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:04 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:04 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:04 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:04 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- User [Hash = 70454689, userId=3, username=cxf10, avatarurl=http://bmob-cdn-15555.b0.upaiyun.com/2018/01/09/e155570340eb843b80af3a7625c39542.jpg, authority=1, password=123456, account=123456, serialVersionUID=1]------------------------------------
+2018/12/27-11:05 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-11:06 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:06 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:06 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:06 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:06 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- User [Hash = 70454689, userId=3, username=cxf10, avatarurl=http://bmob-cdn-15555.b0.upaiyun.com/2018/01/09/e155570340eb843b80af3a7625c39542.jpg, authority=1, password=123456, account=123456, serialVersionUID=1]------------------------------------
+2018/12/27-11:11 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:11 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:11 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:11 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:11 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- User [Hash = 70454689, userId=3, username=cxf10, avatarurl=http://bmob-cdn-15555.b0.upaiyun.com/2018/01/09/e155570340eb843b80af3a7625c39542.jpg, authority=1, password=123456, account=123456, serialVersionUID=1]------------------------------------
+2018/12/27-11:12 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 14124 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-11:12 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-11:12 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-11:12 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-11:12 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 11.73 seconds (JVM running for 14.206)
+2018/12/27-11:12 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:12 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:12 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:12 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:13 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:13 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:13 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:13 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:13 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-11:13 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:13 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:13 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:13 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:13 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-11:14 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:14 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:14 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:14 [http-nio-12080-exec-10] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:14 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:14 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:14 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:14 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:15 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-11:17 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:17 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:17 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:17 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:19 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:19 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:19 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:19 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:19 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:19 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:19 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:19 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:19 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:19 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:19 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:19 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:20 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:20 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:20 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:20 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:20 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:20 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:20 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:20 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:20 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:20 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:20 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:20 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:20 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-11:20 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 12084 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-11:20 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-11:20 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-11:20 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-11:20 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 7.938 seconds (JVM running for 10.077)
+2018/12/27-11:23 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:23 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:23 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:23 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:23 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:23 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:23 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:23 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:23 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-11:23 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 12556 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-11:23 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-11:23 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-11:23 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-11:23 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 10.765 seconds (JVM running for 13.428)
+2018/12/27-11:25 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:25 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:25 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:25 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:25 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:25 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:25 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:25 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:25 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 9520 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-11:25 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-11:25 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-11:25 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-11:26 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 9.175 seconds (JVM running for 11.488)
+2018/12/27-11:26 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:26 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:26 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:26 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:26 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:26 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:26 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:26 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:27 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 12980 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-11:27 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-11:27 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-11:27 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-11:27 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 9.014 seconds (JVM running for 11.904)
+2018/12/27-11:31 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 11868 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-11:31 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-11:31 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-11:31 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-11:31 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 12.424 seconds (JVM running for 14.697)
+2018/12/27-11:32 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:32 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:32 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:32 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:32 [http-nio-12080-exec-2] INFO  org.hzqisheng.interceptor.MyInterceptor- null------------------------------------
+2018/12/27-11:32 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:32 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:32 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:32 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-11:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-11:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-11:35 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-11:35 [http-nio-12080-exec-7] INFO  org.hzqisheng.interceptor.MyInterceptor- User [Hash = 70454689, userId=3, username=cxf10, avatarurl=http://bmob-cdn-15555.b0.upaiyun.com/2018/01/09/e155570340eb843b80af3a7625c39542.jpg, authority=1, password=123456, account=123456, serialVersionUID=1]------------------------------------
+2018/12/27-11:35 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-14:24 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 12964 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-14:24 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-14:24 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-14:24 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-14:24 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 12.676 seconds (JVM running for 15.036)
+2018/12/27-14:24 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-14:24 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-14:24 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-14:24 [http-nio-12080-exec-10] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-14:24 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-14:24 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-14:24 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-14:24 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-14:27 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 5644 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-14:27 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-14:27 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-14:27 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-14:27 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 10.59 seconds (JVM running for 14.052)
+2018/12/27-14:28 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-14:28 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 123456(String)
+2018/12/27-14:28 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-14:28 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-14:28 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-15:01 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.insertSelective- ==>  Preparing: insert into user ( username, avatarUrl, authority, `password`, account ) values ( ?, ?, ?, ?, ? ) 
+2018/12/27-15:01 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.insertSelective- ==> Parameters: 冰残绝恋(String), https://wx.qlogo.cn/mmopen/vi_32/YOuw0zia8s4pk7yz4XXqIkyQAlyzDzib8m1tHibiaCkiaSOH5BpTOSybBQbKOR7zd8HNiczQkialNLktfkWoaA8XPArkA/132(String), 1(Integer), 123456(String), cxy123(String)
+2018/12/27-15:01 [http-nio-12080-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'avatarUrl' at row 1
+### The error may involve org.lis_dao.UserDao.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into user      ( username,                       avatarUrl,                       authority,                       `password`,                       account )       values ( ?,                       ?,                       ?,                       ?,                       ? )
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'avatarUrl' at row 1
+; SQL []; Data truncation: Data too long for column 'avatarUrl' at row 1; nested exception is com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'avatarUrl' at row 1] with root cause
+com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'avatarUrl' at row 1
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3971)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2490)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy89.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy87.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy76.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy77.insertSelective(Unknown Source)
+	at org.hzqisheng.service.Impl.UserServiceImpl.addUser(UserServiceImpl.java:37)
+	at org.hzqisheng.controller.UserController.register(UserController.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018/12/27-15:04 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.insertSelective- ==>  Preparing: insert into user ( username, avatarUrl, authority, `password`, account ) values ( ?, ?, ?, ?, ? ) 
+2018/12/27-15:04 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.insertSelective- ==> Parameters: 冰残绝恋(String), https://wx.qlogo.cn/mmopen/vi_32/YOuw0zia8s4pk7yz4XXqIkyQAlyzDzib8m1tHibiaCkiaSOH5BpTOSybBQbKOR7zd8HNiczQkialNLktfkWoaA8XPArkA/132(String), 1(Integer), 123456(String), cxy123(String)
+2018/12/27-15:04 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.insertSelective- <==    Updates: 1
+2018/12/27-15:04 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户注册------------------------------------
+2018/12/27-15:10 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.insertSelective- ==>  Preparing: insert into user ( username, avatarUrl, authority, `password`, account ) values ( ?, ?, ?, ?, ? ) 
+2018/12/27-15:10 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.insertSelective- ==> Parameters: 冰残绝恋(String), https://wx.qlogo.cn/mmopen/vi_32/YOuw0zia8s4pk7yz4XXqIkyQAlyzDzib8m1tHibiaCkiaSOH5BpTOSybBQbKOR7zd8HNiczQkialNLktfkWoaA8XPArkA/132(String), 1(Integer), 123456(String), cxy123(String)
+2018/12/27-15:10 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.insertSelective- <==    Updates: 1
+2018/12/27-15:10 [http-nio-12080-exec-10] INFO  org.hzqisheng.controller.UserController- 用户注册------------------------------------
+2018/12/27-15:10 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:10 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:10 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:10 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:11 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-15:11 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:11 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:11 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:11 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:12 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:12 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:12 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:12 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:12 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:12 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:12 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:12 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:12 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:12 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:12 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:12 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:13 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:13 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:13 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:13 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:16 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:16 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:16 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:16 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:16 [http-nio-12080-exec-10] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-15:16 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:16 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:16 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:16 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:39 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10196 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-15:39 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-15:39 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-15:39 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-15:40 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 13.208 seconds (JVM running for 16.275)
+2018/12/27-15:42 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 15188 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-15:42 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-15:42 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-15:42 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-15:42 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 20.114 seconds (JVM running for 23.64)
+2018/12/27-15:45 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:45 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:45 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:45 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:46 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 12416 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-15:46 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-15:46 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-15:46 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-15:46 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 15.422 seconds (JVM running for 18.933)
+2018/12/27-15:47 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:47 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:47 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:47 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-15:47 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10712 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-15:47 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-15:47 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-15:47 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-15:48 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 15.745 seconds (JVM running for 19.007)
+2018/12/27-15:48 [http-nio-12080-exec-1] DEBUG org.lis_dao.FeedbackDao.insertSelective- ==>  Preparing: insert into feedback ( feedback_content, contact, creat_time ) values ( ?, ?, ? ) 
+2018/12/27-15:48 [http-nio-12080-exec-1] DEBUG org.lis_dao.FeedbackDao.insertSelective- ==> Parameters: 不错哦(String), 12(String), 2018-12-27 15:48:17.433(Timestamp)
+2018/12/27-15:48 [http-nio-12080-exec-1] DEBUG org.lis_dao.FeedbackDao.insertSelective- <==    Updates: 1
+2018/12/27-15:48 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 提交用户反馈------------------------------------
+2018/12/27-15:51 [http-nio-12080-exec-3] DEBUG org.lis_dao.FeedbackDao.insertSelective- ==>  Preparing: insert into feedback ( user_id, feedback_content, contact, creat_time ) values ( ?, ?, ?, ? ) 
+2018/12/27-15:51 [http-nio-12080-exec-3] DEBUG org.lis_dao.FeedbackDao.insertSelective- ==> Parameters: -1(Long), 1(String), 1(String), 2018-12-27 15:51:38.787(Timestamp)
+2018/12/27-15:51 [http-nio-12080-exec-3] DEBUG org.lis_dao.FeedbackDao.insertSelective- <==    Updates: 1
+2018/12/27-15:51 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 提交用户反馈------------------------------------
+2018/12/27-15:54 [http-nio-12080-exec-5] DEBUG org.lis_dao.FeedbackDao.insertSelective- ==>  Preparing: insert into feedback ( user_id, feedback_content, contact, creat_time ) values ( ?, ?, ?, ? ) 
+2018/12/27-15:54 [http-nio-12080-exec-5] DEBUG org.lis_dao.FeedbackDao.insertSelective- ==> Parameters: -1(Long), 不错哦(String), 1(String), 2018-12-27 15:54:24.802(Timestamp)
+2018/12/27-15:54 [http-nio-12080-exec-5] DEBUG org.lis_dao.FeedbackDao.insertSelective- <==    Updates: 1
+2018/12/27-15:54 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 提交用户反馈------------------------------------
+2018/12/27-15:57 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-15:57 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-15:57 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-15:57 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:04 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:04 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:04 [http-nio-12080-exec-10] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:04 [http-nio-12080-exec-10] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:22 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:22 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:22 [http-nio-12080-exec-1] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:22 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:22 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户退出登录------------------------------------
+2018/12/27-16:22 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:22 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:22 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:22 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:23 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:23 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:23 [http-nio-12080-exec-4] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:23 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:23 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:23 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy(String)
+2018/12/27-16:23 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 0
+2018/12/27-16:24 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:24 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: 12(String)
+2018/12/27-16:24 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 0
+2018/12/27-16:24 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:24 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:24 [http-nio-12080-exec-7] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:24 [http-nio-12080-exec-7] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:25 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:25 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:25 [http-nio-12080-exec-8] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:25 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:30 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:30 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:30 [http-nio-12080-exec-9] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:30 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:33 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:33 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:33 [http-nio-12080-exec-2] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:33 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:33 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:33 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:33 [http-nio-12080-exec-3] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:33 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:35 [http-nio-12080-exec-5] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:35 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:36 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==>  Preparing: select user_id, username, avatarUrl, authority, `password`, account from user WHERE ( account = ? ) 
+2018/12/27-16:36 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- ==> Parameters: cxy123(String)
+2018/12/27-16:36 [http-nio-12080-exec-6] DEBUG org.lis_dao.UserDao.selectByExample- <==      Total: 1
+2018/12/27-16:36 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.UserController- 用户登录------------------------------------
+2018/12/27-16:38 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10712 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-16:38 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-16:38 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-16:38 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-16:38 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 3.644 seconds (JVM running for 3035.784)
+2018/12/27-16:39 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10712 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-16:39 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-16:39 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-16:40 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-16:40 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 6.239 seconds (JVM running for 3141.443)
+2018/12/27-16:40 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10712 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-16:40 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-16:40 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-16:40 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-16:40 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 3.945 seconds (JVM running for 3190.45)
+2018/12/27-16:45 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10712 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-16:45 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-16:45 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-16:45 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-16:45 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 3.908 seconds (JVM running for 3497.792)
+2018/12/27-16:47 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 10712 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-16:47 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-16:47 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-16:47 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-16:47 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 3.684 seconds (JVM running for 3562.701)
+2018/12/27-16:49 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 560 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-16:49 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-16:49 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-16:49 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-16:50 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 8952 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-16:50 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-16:50 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-16:50 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-16:50 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 12.896 seconds (JVM running for 15.456)
+2018/12/27-16:51 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-16:51 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-16:51 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-16:51 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:00 [restartedMain] INFO  org.hzqisheng.Application- Starting Application on DESKTOP-2TIOAVO with PID 8344 (E:\Ideaproject\yunlis\lis_api\target\classes started by thlnkpad in E:\Ideaproject\yunlis)
+2018/12/27-17:00 [restartedMain] DEBUG org.hzqisheng.Application- Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+2018/12/27-17:00 [restartedMain] INFO  org.hzqisheng.Application- The following profiles are active: dev
+2018/12/27-17:00 [restartedMain] INFO  org.hzqisheng.config.MybatisAutoConfiguration- 注册MyBatis分页插件PageHelper
+2018/12/27-17:00 [restartedMain] INFO  org.hzqisheng.Application- Started Application in 14.133 seconds (JVM running for 16.917)
+2018/12/27-17:01 [http-nio-12080-exec-2] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:01 [http-nio-12080-exec-2] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:01 [http-nio-12080-exec-2] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:01 [http-nio-12080-exec-2] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:01 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:01 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:01 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:01 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:02 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:02 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:02 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:02 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:04 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:04 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:04 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:04 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:04 [http-nio-12080-exec-9] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:04 [http-nio-12080-exec-9] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:04 [http-nio-12080-exec-9] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:04 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:07 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:07 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:07 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:07 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:09 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:09 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:09 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:09 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:10 [http-nio-12080-exec-4] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:10 [http-nio-12080-exec-4] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:10 [http-nio-12080-exec-4] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:10 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:10 [http-nio-12080-exec-5] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:10 [http-nio-12080-exec-5] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:10 [http-nio-12080-exec-5] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:10 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:10 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:10 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:10 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:10 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:12 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:12 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:12 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:12 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:13 [http-nio-12080-exec-9] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:13 [http-nio-12080-exec-9] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:13 [http-nio-12080-exec-9] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:13 [http-nio-12080-exec-9] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:13 [http-nio-12080-exec-10] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:13 [http-nio-12080-exec-10] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:13 [http-nio-12080-exec-10] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:13 [http-nio-12080-exec-10] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:14 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:14 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:14 [http-nio-12080-exec-1] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:14 [http-nio-12080-exec-1] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:16 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:16 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:16 [http-nio-12080-exec-3] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:16 [http-nio-12080-exec-3] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:16 [http-nio-12080-exec-4] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:16 [http-nio-12080-exec-4] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:16 [http-nio-12080-exec-4] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:16 [http-nio-12080-exec-4] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:17 [http-nio-12080-exec-5] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:17 [http-nio-12080-exec-5] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:17 [http-nio-12080-exec-5] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:17 [http-nio-12080-exec-5] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:17 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:17 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:17 [http-nio-12080-exec-6] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:17 [http-nio-12080-exec-6] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------
+2018/12/27-17:18 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- ==>  Preparing: select category_id, category_name from category 
+2018/12/27-17:18 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- ==> Parameters: 
+2018/12/27-17:18 [http-nio-12080-exec-8] DEBUG org.lis_dao.CategoryDao.selectByExample- <==      Total: 4
+2018/12/27-17:18 [http-nio-12080-exec-8] INFO  org.hzqisheng.controller.ArticleController- 用户注册------------------------------------

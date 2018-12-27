@@ -2,6 +2,7 @@ package org.hzqisheng.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.hzqisheng.service.UserService;
+import org.lis_entity.Feedback;
 import org.lis_entity.User;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import org.util.response.ResponseDataUtil;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -37,7 +39,7 @@ public class UserController {
      * @return
      * @throws Exception
      */
-    @RequestMapping(value = "logIn", method = RequestMethod.POST)
+    @RequestMapping(value = "userLogIn", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> logIn(String userAccount, String userPwd, HttpSession session) throws Exception {
         if (StringUtil.isBlank(userAccount) || StringUtil.isBlank(userPwd)) {
@@ -47,12 +49,63 @@ public class UserController {
         if (null == user) {
             return ResponseDataUtil.fail("账号不存在！").build();
         }
-        log.info("管理员登录....................");
+        log.info("用户登录------------------------------------");
         if (userPwd.equals(user.getPassword())) {
             session.setAttribute("currUser", user);
-            return ResponseDataUtil.ok().putData("data", user).build();
-        } else {
+            return ResponseDataUtil.
+                    ok().
+                    putData("data",session.getId()).
+                    putData("user", session.getAttribute("currUser")).
+                    build();
+        } else{
             return ResponseDataUtil.fail("密码错误！").build();
         }
     }
+
+    /**
+     * 用户退出登录
+     * @param session
+     * @return
+     */
+    @RequestMapping(value="logOut",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> logOut(HttpSession session){
+        log.info("用户退出登录------------------------------------");
+        session.setAttribute("currUser",null);
+        return ResponseDataUtil.ok().build();
+    }
+
+    /**
+     * 用户注册
+     * @param user
+     * @return
+     */
+    @RequestMapping(value="userRegister",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> register(User user){
+        userService.addUser(user);
+        log.info("用户注册------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("data", user).
+                build();
+    }
+
+    /**
+     * 提交用户反馈
+     * @param feedback
+     * @return
+     */
+    @RequestMapping(value="submitFeedback",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> submitFeedback(Feedback feedback){
+        feedback.setCreatTime(new Date());
+        userService.addFeedback(feedback);
+        log.info("提交用户反馈------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+
+    }
+
 }

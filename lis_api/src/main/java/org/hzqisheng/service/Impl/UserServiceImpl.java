@@ -1,7 +1,9 @@
 package org.hzqisheng.service.Impl;
 
 import org.hzqisheng.service.UserService;
+import org.lis_dao.FeedbackDao;
 import org.lis_dao.UserDao;
+import org.lis_entity.Feedback;
 import org.lis_entity.User;
 import org.lis_entity.UserExample;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
     @Resource
     UserDao userDao;
+    @Resource
+    FeedbackDao feedbackDao;
     @Override
     public User findUserByAccount(String account) {
         UserExample userExample=new UserExample();
@@ -30,5 +34,15 @@ public class UserServiceImpl implements UserService{
             return userList.get(0);
         }
         return null;
+    }
+
+    @Override
+    public boolean addUser(User user) {
+        return userDao.insertSelective(user) > 0;
+    }
+
+    @Override
+    public boolean addFeedback(Feedback feedback) {
+        return feedbackDao.insertSelective(feedback) > 0;
     }
 }

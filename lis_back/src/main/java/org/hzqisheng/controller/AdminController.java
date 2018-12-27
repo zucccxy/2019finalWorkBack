@@ -238,7 +238,7 @@ public class AdminController {
         }
         MD5 md5 = new MD5();
         String md5Str = md5.getStrToMD5(adminPwd);
-        log.info("管理员登录....................");
+        log.info("管理员登录------------------------------------");
         if (admin.getAdminPwd().equals(md5Str)) {
             session.setAttribute("currAdmin", admin);
             return ResponseDataUtil.ok().putData("data", admin).build();
@@ -271,7 +271,7 @@ public class AdminController {
         MD5 md5=new MD5();
         String currAdminPassword=currAdmin.getAdminPwd();
         String oldPassword=md5.getStrToMD5(oldPwd);
-        log.info("管理员密码修改....................");
+        log.info("管理员密码修改------------------------------------");
         if(!currAdminPassword.equals(oldPassword)){
             return ResponseDataUtil.
                     fail("旧密码输入错误！").
@@ -293,7 +293,7 @@ public class AdminController {
     @RequestMapping(value="checkLogin",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> checkLogin(Admin admin,HttpSession session){
-        log.info("判断管理员是否登录");
+        log.info("判断管理员是否登录------------------------------------");
         if(session.getAttribute("currAdmin")== null){
             return ResponseDataUtil.fail().build();
         }
@@ -310,7 +310,7 @@ public class AdminController {
     @RequestMapping(value="logOut",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> logOut(HttpSession session){
-        log.info("判断管理员是否登录");
+        log.info("管理员退出登录------------------------------------");
         session.setAttribute("currAdmin",null);
         return ResponseDataUtil.ok().build();
     }
