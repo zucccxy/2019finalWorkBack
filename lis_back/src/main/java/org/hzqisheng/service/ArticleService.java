@@ -1,7 +1,8 @@
 package org.hzqisheng.service;
 
 import org.lis_entity.Article;
-import org.lis_entity.Category;
+import org.lis_entity.CommentResult;
+import org.lis_entity.ReplayResult;
 
 import java.util.Date;
 import java.util.List;
@@ -39,4 +40,45 @@ public interface ArticleService {
      */
     public boolean updateArticle(Article article,Long []categoryIds);
 
-        }
+    /**
+     * 删除博文
+     * @param articleId
+     * @return
+     */
+    public boolean delArticle(Long  articleId);
+
+    /**
+     * 评论列表
+     * @param username
+     * @param title
+     * @param commentContent
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    public List<CommentResult> findCommentList(String username, String title, String commentContent, Date startTime, Date endTime);
+
+    /**
+     * 删除评论
+     * @param commentId
+     * @return
+     */
+    public boolean delComment(Long  commentId);
+    /**
+     * 回复列表
+     * @param commentId
+     * @param username
+     * @param replyContent
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    public List<ReplayResult> findReplayResult(Long commentId,String username,String replyContent,Date startTime,Date endTime);
+
+    /**
+     * 删除回复
+     * @param replyId
+     * @return
+     */
+    public boolean delRepaly(Long  replyId);
+}

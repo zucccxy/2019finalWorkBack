@@ -257,4 +257,46 @@
       content = #{content,jdbcType=VARCHAR}
     where article_id = #{articleId,jdbcType=BIGINT}
   </update>
+  <select id="selectByCommentResultCondition" parameterType="Map" resultType="org.lis_entity.CommentResult">
+    select comment_id as commentId,comment_content as commentContent,title,comment.create_time as createTime,username
+    from comment inner join user on comment.user_id = user.user_id inner join article on comment.article_id = article.article_id
+    <where>
+      <if test="username!=null and username!=''">
+        username like  "%"#{username}"%"
+      </if>
+      <if test="title!=null and title!=''">
+        AND title like  "%"#{title}"%"
+      </if>
+      <if test="commentContent!=null and commentContent!=''">
+        AND comment_content like  "%"#{commentContent}"%"
+      </if>
+      <if test="startTime!=null">
+        AND  comment.create_time &gt;=  #{startTime}
+      </if>
+      <if test="endTime!=null">
+        AND  comment.create_time  &lt;=  #{endTime}
+      </if>
+    </where>
+    order by title
+  </select>
+  <select id="selectByReplayResultCondition" parameterType="Map" resultType="org.lis_entity.ReplayResult">
+    select reply_id as replyId,reply_content as replyContent,username,replay.create_time as createTime
+    from replay inner join user on replay.user_id = user.user_id inner join comment on replay.comment_id = comment.comment_id
+    <where>
+     replay.comment_id = #{commentId}
+    <if test="username!=null and username!=''">
+      AND   username like  "%"#{username}"%"
+      </if>
+      <if test="replyContent!=null and replyContent!=''">
+        AND reply_content like  "%"#{replyContent}"%"
+      </if>
+      <if test="startTime!=null">
+        AND  replay.create_time &gt;=  #{startTime}
+      </if>
+      <if test="endTime!=null">
+        AND  replay.create_time  &lt;=  #{endTime}
+      </if>
+    </where>
+    order by username
+  </select>
 </mapper>

@@ -375,73 +375,63 @@ public class CommentExample {
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorIsNull() {
-            addCriterion("comment_author is null");
+        public Criteria andUserIdIsNull() {
+            addCriterion("user_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorIsNotNull() {
-            addCriterion("comment_author is not null");
+        public Criteria andUserIdIsNotNull() {
+            addCriterion("user_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorEqualTo(String value) {
-            addCriterion("comment_author =", value, "commentAuthor");
+        public Criteria andUserIdEqualTo(Long value) {
+            addCriterion("user_id =", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorNotEqualTo(String value) {
-            addCriterion("comment_author <>", value, "commentAuthor");
+        public Criteria andUserIdNotEqualTo(Long value) {
+            addCriterion("user_id <>", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorGreaterThan(String value) {
-            addCriterion("comment_author >", value, "commentAuthor");
+        public Criteria andUserIdGreaterThan(Long value) {
+            addCriterion("user_id >", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorGreaterThanOrEqualTo(String value) {
-            addCriterion("comment_author >=", value, "commentAuthor");
+        public Criteria andUserIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("user_id >=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorLessThan(String value) {
-            addCriterion("comment_author <", value, "commentAuthor");
+        public Criteria andUserIdLessThan(Long value) {
+            addCriterion("user_id <", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorLessThanOrEqualTo(String value) {
-            addCriterion("comment_author <=", value, "commentAuthor");
+        public Criteria andUserIdLessThanOrEqualTo(Long value) {
+            addCriterion("user_id <=", value, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorLike(String value) {
-            addCriterion("comment_author like", value, "commentAuthor");
+        public Criteria andUserIdIn(List<Long> values) {
+            addCriterion("user_id in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorNotLike(String value) {
-            addCriterion("comment_author not like", value, "commentAuthor");
+        public Criteria andUserIdNotIn(List<Long> values) {
+            addCriterion("user_id not in", values, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorIn(List<String> values) {
-            addCriterion("comment_author in", values, "commentAuthor");
+        public Criteria andUserIdBetween(Long value1, Long value2) {
+            addCriterion("user_id between", value1, value2, "userId");
             return (Criteria) this;
         }
 
-        public Criteria andCommentAuthorNotIn(List<String> values) {
-            addCriterion("comment_author not in", values, "commentAuthor");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommentAuthorBetween(String value1, String value2) {
-            addCriterion("comment_author between", value1, value2, "commentAuthor");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommentAuthorNotBetween(String value1, String value2) {
-            addCriterion("comment_author not between", value1, value2, "commentAuthor");
+        public Criteria andUserIdNotBetween(Long value1, Long value2) {
+            addCriterion("user_id not between", value1, value2, "userId");
             return (Criteria) this;
         }
     }

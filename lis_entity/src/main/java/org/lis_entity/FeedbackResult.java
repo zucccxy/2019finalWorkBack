@@ -12,7 +12,7 @@ public class FeedbackResult {
      */
     private Long feedbackId;
     /**
-     * 用户id
+     * 用户名
      */
     private String username;
 

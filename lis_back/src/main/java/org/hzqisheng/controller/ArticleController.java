@@ -4,10 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.hzqisheng.service.ArticleService;
-import org.lis_entity.Admin;
-import org.lis_entity.Article;
-import org.lis_entity.Category;
-import org.lis_entity.User;
+import org.lis_entity.*;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -79,6 +76,13 @@ public class ArticleController {
                 ok().
                 build();
     }
+
+    /**
+     * 编辑博文
+     * @param article
+     * @param categoryIds
+     * @return
+     */
     @RequestMapping(value="updateArticle",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> updateArticle(Article article,Long[] categoryIds){
@@ -88,4 +92,106 @@ public class ArticleController {
                 .ok()
                 .build();
     }
+
+    /**
+     * 删除文章
+     * @param articleId
+     * @return
+     */
+    @RequestMapping(value="delArticle",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> delArticle(Long articleId){
+        articleService.delArticle(articleId);
+        log.info("删除文章------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+    /**
+     * 评论列表
+     * @param pageIndex
+     * @param pageSize
+     * @param username
+     * @param title
+     * @param commentContent
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    @RequestMapping(value="commentList",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> findCommentList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
+                                                String username,String title,String commentContent ,Date startTime,Date endTime) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<CommentResult> commentList = articleService.findCommentList(username, title,commentContent,startTime, endTime);
+        Page<CommentResult> page = (Page<CommentResult>) commentList;
+        log.info("评论列表查询------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", commentList).
+                putData("pageIndex", pageIndex).
+                putData("pageSize", pageSize).
+                putData("totalCount", page.getTotal()).
+                build();
+    }
+
+    /**
+     * 删除评论
+     * @param commentId
+     * @return
+     */
+    @RequestMapping(value="delComment",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> delComment(Long commentId){
+        articleService.delComment(commentId);
+        log.info("删除评论------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
+
+    /**
+     * 获取回复列表
+     * @param pageIndex
+     * @param pageSize
+     * @param commentId
+     * @param username
+     * @param replyContent
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    @RequestMapping(value="replayList",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> findCommentList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
+                                               @RequestParam(required=true) Long commentId,String username,String replyContent,Date startTime,Date endTime) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<ReplayResult> replayList = articleService.findReplayResult(commentId,username,replyContent,startTime, endTime);
+        Page<ReplayResult> page = (Page<ReplayResult>) replayList;
+        log.info("回复列表查询------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", replayList).
+                putData("pageIndex", pageIndex).
+                putData("pageSize", pageSize).
+                putData("totalCount", page.getTotal()).
+                build();
+    }
+
+    /**
+     * 删除回复
+     * @param replyId
+     * @return
+     */
+    @RequestMapping(value="delReplay",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> delReplay(Long replyId){
+        articleService.delRepaly(replyId);
+        log.info("删除回复------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
 }

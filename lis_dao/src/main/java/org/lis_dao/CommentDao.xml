@@ -6,7 +6,7 @@
     <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
     <result column="article_id" jdbcType="BIGINT" property="articleId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="comment_author" jdbcType="VARCHAR" property="commentAuthor" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -67,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    comment_id, comment_content, article_id, create_time, comment_author
+    comment_id, comment_content, article_id, create_time, user_id
   </sql>
   <select id="selectByExample" parameterType="org.lis_entity.CommentExample" resultMap="BaseResultMap">
     select
@@ -109,9 +109,9 @@
   </delete>
   <insert id="insert" keyColumn="comment_id" keyProperty="commentId" parameterType="org.lis_entity.Comment" useGeneratedKeys="true">
     insert into comment (comment_content, article_id, create_time, 
-      comment_author)
+      user_id)
     values (#{commentContent,jdbcType=VARCHAR}, #{articleId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{commentAuthor,jdbcType=VARCHAR})
+      #{userId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" keyColumn="comment_id" keyProperty="commentId" parameterType="org.lis_entity.Comment" useGeneratedKeys="true">
     insert into comment
@@ -125,8 +125,8 @@
       <if test="createTime != null">
         create_time,
       </if>
-      <if test="commentAuthor != null">
-        comment_author,
+      <if test="userId != null">
+        user_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -139,8 +139,8 @@
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="commentAuthor != null">
-        #{commentAuthor,jdbcType=VARCHAR},
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -165,8 +165,8 @@
       <if test="record.createTime != null">
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.commentAuthor != null">
-        comment_author = #{record.commentAuthor,jdbcType=VARCHAR},
+      <if test="record.userId != null">
+        user_id = #{record.userId,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null">
@@ -179,7 +179,7 @@
       comment_content = #{record.commentContent,jdbcType=VARCHAR},
       article_id = #{record.articleId,jdbcType=BIGINT},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      comment_author = #{record.commentAuthor,jdbcType=VARCHAR}
+      user_id = #{record.userId,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -196,8 +196,8 @@
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="commentAuthor != null">
-        comment_author = #{commentAuthor,jdbcType=VARCHAR},
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
       </if>
     </set>
     where comment_id = #{commentId,jdbcType=BIGINT}
@@ -207,7 +207,7 @@
     set comment_content = #{commentContent,jdbcType=VARCHAR},
       article_id = #{articleId,jdbcType=BIGINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
-      comment_author = #{commentAuthor,jdbcType=VARCHAR}
+      user_id = #{userId,jdbcType=BIGINT}
     where comment_id = #{commentId,jdbcType=BIGINT}
   </update>
 </mapper>

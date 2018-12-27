@@ -1,11 +1,9 @@
 package org.hzqisheng.service.impl;
 
+import org.lis_dao.CollectionDao;
 import org.lis_dao.FeedbackDao;
 import org.lis_dao.SignDao;
-import org.lis_entity.FeedbackResult;
-import org.lis_entity.SignResult;
-import org.lis_entity.User;
-import org.lis_entity.UserExample;
+import org.lis_entity.*;
 
 import org.hzqisheng.service.UserService;
 import org.springframework.stereotype.Service;
@@ -27,7 +25,8 @@ public class UserServiceImpl  implements UserService {
     SignDao signDao;
     @Resource
     FeedbackDao feedbackDao;
-
+    @Resource
+    CollectionDao collectionDao;
     @Override
     public List<User> findUserList(String userAccount, String userName, Integer userLevel) {
         UserExample userExample = new UserExample();
@@ -44,9 +43,7 @@ public class UserServiceImpl  implements UserService {
     }
 
     @Override
-    public boolean delUser(Long userId) {
-        return userDao.deleteByPrimaryKey(userId) > 0;
-    }
+    public boolean delUser(Long userId) {return userDao.deleteByPrimaryKey(userId) > 0; }
 
     @Override
     public boolean addUser(User user) {
@@ -77,9 +74,9 @@ public class UserServiceImpl  implements UserService {
     @Override
     public List<FeedbackResult> findFeedbackList(String username, Date startTime, Date endTime) {
        HashMap<String,Object> map=new HashMap<>();
-       map.put("username",username);
-       map.put("startTime",startTime);
-       map.put("endTime",endTime);
+        map.put("username",username);
+        map.put("startTime",startTime);
+        map.put("endTime",endTime);
        return userDao.selectByFeedbackCondition(map);
     }
 
@@ -89,5 +86,17 @@ public class UserServiceImpl  implements UserService {
         return feedbackDao.deleteByPrimaryKey(feedbackId) > 0;
     }
 
-
+    @Override
+    public List<CollectionResult> findCollectionResut(String username, String title, Date startTime, Date endTime) {
+        HashMap<String,Object> map=new HashMap<>();
+        map.put("username",username);
+        map.put("title",title);
+        map.put("startTime",startTime);
+        map.put("endTime",endTime);
+        return userDao.selectByCollectionCondition(map);
+    }
+    @Override
+    public boolean delCollection(Long collectionId) {
+        return collectionDao.deleteByPrimaryKey(collectionId) > 0;
+    }
 }

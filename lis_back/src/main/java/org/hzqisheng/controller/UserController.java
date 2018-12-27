@@ -2,10 +2,7 @@ package org.hzqisheng.controller;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import org.lis_entity.FeedbackResult;
-import org.lis_entity.Sign;
-import org.lis_entity.SignResult;
-import org.lis_entity.User;
+import org.lis_entity.*;
 import lombok.extern.slf4j.Slf4j;
 import org.enums.ResponseCodeEnum;
 import org.hzqisheng.service.UserService;
@@ -164,7 +161,7 @@ public class UserController {
         PageHelper.startPage(pageIndex, pageSize);
         List<FeedbackResult> feedbackList = userService.findFeedbackList(username, startTime, endTime);
         Page<FeedbackResult> page = (Page<FeedbackResult>) feedbackList;
-        log.info("用户签到列表查询------------------------------------");
+        log.info("用户反馈列表查询------------------------------------");
         return ResponseDataUtil.
                 ok().
                 putData("dataList", feedbackList).
@@ -184,6 +181,48 @@ public class UserController {
     public Map<String,Object> delFeedback(Long feedbackId){
         userService.delFeedback(feedbackId);
         log.info("删除反馈------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
+    /**
+     * 获取用户收藏列表
+     * @param pageIndex
+     * @param pageSize
+     * @param username
+     * @param title
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    @RequestMapping(value="collectionList",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> findCollectionList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
+                                                String username,String title,Date startTime,Date endTime) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<CollectionResult> collectionList = userService.findCollectionResut(username,title,startTime, endTime);
+        Page<CollectionResult> page = (Page<CollectionResult>) collectionList;
+        log.info("用户收藏列表查询------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", collectionList).
+                putData("pageIndex", pageIndex).
+                putData("pageSize", pageSize).
+                putData("totalCount", page.getTotal()).
+                build();
+    }
+
+    /**
+     * 删除收藏记录
+     * @param collectionId
+     * @return
+     */
+    @RequestMapping(value="delCollection",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> delCollection(Long collectionId){
+        userService.delCollection(collectionId);
+        log.info("删除收藏记录------------------------------------");
         return ResponseDataUtil.
                 ok().
                 build();

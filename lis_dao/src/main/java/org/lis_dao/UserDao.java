@@ -1,9 +1,6 @@
 package org.lis_dao;
 
-import org.lis_entity.FeedbackResult;
-import org.lis_entity.SignResult;
-import org.lis_entity.User;
-import org.lis_entity.UserExample;
+import org.lis_entity.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -34,4 +31,5 @@ public interface UserDao {
 
     List<SignResult> selectNameAndSign(HashMap map);
     List<FeedbackResult> selectByFeedbackCondition(HashMap map);
+    List<CollectionResult> selectByCollectionCondition(HashMap map);
 }

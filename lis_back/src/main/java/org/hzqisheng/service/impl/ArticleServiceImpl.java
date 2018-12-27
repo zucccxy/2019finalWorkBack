@@ -1,14 +1,14 @@
 package org.hzqisheng.service.impl;
 
 import org.hzqisheng.service.ArticleService;
-import org.lis_dao.ArticleCategoryDao;
-import org.lis_dao.ArticleDao;
-import org.lis_dao.CategoryDao;
+import org.lis_dao.*;
 import org.lis_entity.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -23,6 +23,10 @@ public class ArticleServiceImpl implements ArticleService {
     CategoryDao categoryDao;
     @Resource
     ArticleCategoryDao articleCategoryDao;
+    @Resource
+    CommentDao commentDao;
+    @Resource
+    ReplayDao replayDao;
     public List<Article> findArticleList(String title, String expect, String author, Date startTime, Date endTime){
         ArticleExample articleExample=new ArticleExample();
         ArticleExample.Criteria criteria=articleExample.createCriteria();
@@ -44,6 +48,7 @@ public class ArticleServiceImpl implements ArticleService {
        articleExample.setOrderByClause("author");
         return articleDao.selectByExample(articleExample);
     }
+
 
     @Override
     public boolean addArticle(String  author,Article article,  Long[] categoryIds) {
@@ -83,6 +88,55 @@ public class ArticleServiceImpl implements ArticleService {
             }
         }
             return true;
+    }
+
+    @Override
+    public boolean delArticle(Long articleId) {
+        CommentExample commentExample=new CommentExample();
+        CommentExample.Criteria criteria=commentExample.createCriteria();
+        criteria.andArticleIdEqualTo(articleId);
+        List<Comment> commentList=commentDao.selectByExample(commentExample);
+        for(Comment comment:commentList){
+            delComment(comment.getCommentId());
+        }
+        commentDao.deleteByExample(commentExample);
+        return articleDao.deleteByPrimaryKey(articleId) > 0;
+    }
+
+    @Override
+    public List<CommentResult> findCommentList(String username, String title, String commentContent, Date startTime, Date endTime) {
+        HashMap<String,Object> map=new HashMap<>();
+        map.put("username",username);
+        map.put("title",title);
+        map.put("commentContent",commentContent);
+        map.put("startTime",startTime);
+        map.put("endTime",endTime);
+        return articleDao.selectByCommentResultCondition(map);
+    }
+
+    @Override
+    public boolean delComment(Long commentId) {
+        ReplayExample replayExample=new ReplayExample();
+        ReplayExample.Criteria criteria=replayExample.createCriteria();
+        criteria.andCommentIdEqualTo(commentId);
+        replayDao.deleteByExample(replayExample);
+        return  commentDao.deleteByPrimaryKey(commentId) > 0 ;
+    }
+
+    @Override
+    public List<ReplayResult> findReplayResult(Long commentId, String username, String replyContent, Date startTime, Date endTime) {
+        HashMap<String,Object> map=new HashMap<>();
+        map.put("commentId",commentId);
+        map.put("username",username);
+        map.put("replyContent",replyContent);
+        map.put("startTime",startTime);
+        map.put("endTime",endTime);
+        return articleDao.selectByReplayResultCondition(map);
+    }
+
+    @Override
+    public boolean delRepaly(Long replyId) {
+        return replayDao.deleteByPrimaryKey(replyId) > 0;
     }
 }
 

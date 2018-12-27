@@ -19,11 +19,6 @@ public class Replay implements Serializable {
     private String replyContent;
 
     /**
-     * 回复作者
-     */
-    private String replyAuthor;
-
-    /**
      * 评论id
      */
     private Long commentId;
@@ -32,6 +27,11 @@ public class Replay implements Serializable {
      * 回复创建时间
      */
     private Date createTime;
+
+    /**
+     * 用户id
+     */
+    private Long userId;
 
     private static final long serialVersionUID = 1L;
 
@@ -51,14 +51,6 @@ public class Replay implements Serializable {
         this.replyContent = replyContent;
     }
 
-    public String getReplyAuthor() {
-        return replyAuthor;
-    }
-
-    public void setReplyAuthor(String replyAuthor) {
-        this.replyAuthor = replyAuthor;
-    }
-
     public Long getCommentId() {
         return commentId;
     }
@@ -75,6 +67,14 @@ public class Replay implements Serializable {
         this.createTime = createTime;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (this == that) {
@@ -89,9 +89,9 @@ public class Replay implements Serializable {
         Replay other = (Replay) that;
         return (this.getReplyId() == null ? other.getReplyId() == null : this.getReplyId().equals(other.getReplyId()))
             && (this.getReplyContent() == null ? other.getReplyContent() == null : this.getReplyContent().equals(other.getReplyContent()))
-            && (this.getReplyAuthor() == null ? other.getReplyAuthor() == null : this.getReplyAuthor().equals(other.getReplyAuthor()))
             && (this.getCommentId() == null ? other.getCommentId() == null : this.getCommentId().equals(other.getCommentId()))
-            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()));
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()));
     }
 
     @Override
@@ -100,9 +100,9 @@ public class Replay implements Serializable {
         int result = 1;
         result = prime * result + ((getReplyId() == null) ? 0 : getReplyId().hashCode());
         result = prime * result + ((getReplyContent() == null) ? 0 : getReplyContent().hashCode());
-        result = prime * result + ((getReplyAuthor() == null) ? 0 : getReplyAuthor().hashCode());
         result = prime * result + ((getCommentId() == null) ? 0 : getCommentId().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         return result;
     }
 
@@ -114,9 +114,9 @@ public class Replay implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", replyId=").append(replyId);
         sb.append(", replyContent=").append(replyContent);
-        sb.append(", replyAuthor=").append(replyAuthor);
         sb.append(", commentId=").append(commentId);
         sb.append(", createTime=").append(createTime);
+        sb.append(", userId=").append(userId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

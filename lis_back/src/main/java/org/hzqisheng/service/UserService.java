@@ -1,5 +1,6 @@
 package org.hzqisheng.service;
 
+import org.lis_entity.CollectionResult;
 import org.lis_entity.FeedbackResult;
 import org.lis_entity.SignResult;
 import org.lis_entity.User;
@@ -72,4 +73,21 @@ public interface UserService {
      * @return
      */
     public boolean  delFeedback(Long feedbackId);
+
+    /**
+     * 获取收藏列表
+     * @param username
+     * @param title
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    public List<CollectionResult> findCollectionResut(String username,String title,Date startTime,Date endTime);
+
+    /**
+     * 删除收藏记录
+     * @param collectionId
+     * @return
+     */
+    public boolean delCollection(Long  collectionId);
 }

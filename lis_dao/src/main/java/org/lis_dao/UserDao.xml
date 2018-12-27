@@ -255,4 +255,23 @@
      </if>
      </where>
    </select>
+  <select id="selectByCollectionCondition" parameterType="Map" resultType="org.lis_entity.CollectionResult">
+    select username,collection_id as collectionId,title,collection.create_time as createTime
+    from collection inner join user on collection.user_id = user.user_id  inner join article on collection.article_id = article.article_id
+    <where>
+      <if test="username!=null and username!=''">
+        username like  "%"#{username}"%"
+      </if>
+      <if test="title!=null and title!=''">
+        AND title like  "%"#{title}"%"
+      </if>
+      <if test="startTime!=null">
+        AND  collection.create_time &gt;=  #{startTime}
+      </if>
+      <if test="endTime!=null">
+        AND  collection.create_time  &lt;=  #{endTime}
+      </if>
+    </where>
+    order by username
+</select>
 </mapper>

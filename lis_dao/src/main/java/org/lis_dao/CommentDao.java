@@ -1,9 +1,9 @@
 package org.lis_dao;
 
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 import org.lis_entity.Comment;
 import org.lis_entity.CommentExample;
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface CommentDao {
     long countByExample(CommentExample example);

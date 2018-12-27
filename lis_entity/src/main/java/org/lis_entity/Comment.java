@@ -29,9 +29,9 @@ public class Comment implements Serializable {
     private Date createTime;
 
     /**
-     * 评论作者名字
+     * 作者id
      */
-    private String commentAuthor;
+    private Long userId;
 
     private static final long serialVersionUID = 1L;
 
@@ -67,12 +67,12 @@ public class Comment implements Serializable {
         this.createTime = createTime;
     }
 
-    public String getCommentAuthor() {
-        return commentAuthor;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setCommentAuthor(String commentAuthor) {
-        this.commentAuthor = commentAuthor;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -91,7 +91,7 @@ public class Comment implements Serializable {
             && (this.getCommentContent() == null ? other.getCommentContent() == null : this.getCommentContent().equals(other.getCommentContent()))
             && (this.getArticleId() == null ? other.getArticleId() == null : this.getArticleId().equals(other.getArticleId()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
-            && (this.getCommentAuthor() == null ? other.getCommentAuthor() == null : this.getCommentAuthor().equals(other.getCommentAuthor()));
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()));
     }
 
     @Override
@@ -102,7 +102,7 @@ public class Comment implements Serializable {
         result = prime * result + ((getCommentContent() == null) ? 0 : getCommentContent().hashCode());
         result = prime * result + ((getArticleId() == null) ? 0 : getArticleId().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        result = prime * result + ((getCommentAuthor() == null) ? 0 : getCommentAuthor().hashCode());
+        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         return result;
     }
 
@@ -116,7 +116,7 @@ public class Comment implements Serializable {
         sb.append(", commentContent=").append(commentContent);
         sb.append(", articleId=").append(articleId);
         sb.append(", createTime=").append(createTime);
-        sb.append(", commentAuthor=").append(commentAuthor);
+        sb.append(", userId=").append(userId);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
