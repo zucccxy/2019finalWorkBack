@@ -35,4 +35,6 @@ public interface ArticleDao {
 
     List<ReplayResult>  selectByReplayResultCondition(HashMap map);
 
+    List<Article> selectArticleListByCategoryId(Long categoryId);
+
 }

@@ -30,6 +30,9 @@ public interface UserDao {
     int updateByPrimaryKey(User record);
 
     List<SignResult> selectNameAndSign(HashMap map);
+
     List<FeedbackResult> selectByFeedbackCondition(HashMap map);
+
     List<CollectionResult> selectByCollectionCondition(HashMap map);
+
 }

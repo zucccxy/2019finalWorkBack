@@ -299,4 +299,11 @@
     </where>
     order by username
   </select>
+
+  <select id="selectArticleListByCategoryId" parameterType="java.lang.Long" resultType="org.lis_entity.Article">
+    select article.article_id as articleId,title,expect,author,read_count as readCount,article.create_time as createTime
+from article_category inner join article on article_category.article__id = article.article_id inner join category on article_category.category_id = category.category_id
+where  article_category.category_id = #{categoryId}
+
+  </select>
 </mapper>
