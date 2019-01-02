@@ -1,7 +1,6 @@
 package org.hzqisheng.service;
 
-import org.lis_entity.Article;
-import org.lis_entity.Category;
+import org.lis_entity.*;
 
 import java.util.List;
 
@@ -35,4 +34,32 @@ public interface ArticleService {
      * @return
      */
     public Article findArticleListByArticleId(Long articleId);
+
+    /**
+     * 通过文章id查找文章的标签
+     * @param articleId
+     * @return
+     */
+    public List<Category> findArticleCategoryByArticleId(Long articleId);
+
+    /**
+     * 通过文章id统计评论数量
+     * @param articleId
+     * @return
+     */
+    public long countCommentByArticleId(Long articleId);
+
+    /**
+     * 通过文章id获得评论列表
+     * @param articleId
+     * @return
+     */
+    public List<CommentResult> getCommentListByArticleId(Long articleId);
+
+    /**
+     *
+     * @param commentId
+     * @return
+     */
+    public List<ReplayResult> getReplyListByCommentId(Long commentId);
 }

@@ -37,4 +37,8 @@ public interface ArticleDao {
 
     List<Article> selectArticleListByCategoryId(Long categoryId);
 
+    List<CommentResult>  selectCommentListByArticleId(Long articleId);
+
+    List<ReplayResult> selectReplayListByCommentId(Long commentId);
+
 }

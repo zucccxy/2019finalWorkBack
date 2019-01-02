@@ -4,9 +4,10 @@
   <resultMap id="BaseResultMap" type="org.lis_entity.Replay">
     <id column="reply_id" jdbcType="BIGINT" property="replyId" />
     <result column="reply_content" jdbcType="VARCHAR" property="replyContent" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="comment_id" jdbcType="BIGINT" property="commentId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="replied_name" jdbcType="VARCHAR" property="repliedName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -67,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    reply_id, reply_content, comment_id, create_time, user_id
+    reply_id, reply_content, user_id, comment_id, create_time, replied_name
   </sql>
   <select id="selectByExample" parameterType="org.lis_entity.ReplayExample" resultMap="BaseResultMap">
     select
@@ -108,10 +109,10 @@
     </if>
   </delete>
   <insert id="insert" keyColumn="reply_id" keyProperty="replyId" parameterType="org.lis_entity.Replay" useGeneratedKeys="true">
-    insert into replay (reply_content, comment_id, create_time, 
-      user_id)
-    values (#{replyContent,jdbcType=VARCHAR}, #{commentId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{userId,jdbcType=BIGINT})
+    insert into replay (reply_content, user_id, comment_id, 
+      create_time, replied_name)
+    values (#{replyContent,jdbcType=VARCHAR}, #{userId,jdbcType=BIGINT}, #{commentId,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{repliedName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" keyColumn="reply_id" keyProperty="replyId" parameterType="org.lis_entity.Replay" useGeneratedKeys="true">
     insert into replay
@@ -119,19 +120,25 @@
       <if test="replyContent != null">
         reply_content,
       </if>
+      <if test="userId != null">
+        user_id,
+      </if>
       <if test="commentId != null">
         comment_id,
       </if>
       <if test="createTime != null">
         create_time,
       </if>
-      <if test="userId != null">
-        user_id,
+      <if test="repliedName != null">
+        replied_name,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="replyContent != null">
         #{replyContent,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
       </if>
       <if test="commentId != null">
         #{commentId,jdbcType=BIGINT},
@@ -139,8 +146,8 @@
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=BIGINT},
+      <if test="repliedName != null">
+        #{repliedName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -159,14 +166,17 @@
       <if test="record.replyContent != null">
         reply_content = #{record.replyContent,jdbcType=VARCHAR},
       </if>
+      <if test="record.userId != null">
+        user_id = #{record.userId,jdbcType=BIGINT},
+      </if>
       <if test="record.commentId != null">
         comment_id = #{record.commentId,jdbcType=BIGINT},
       </if>
       <if test="record.createTime != null">
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.userId != null">
-        user_id = #{record.userId,jdbcType=BIGINT},
+      <if test="record.repliedName != null">
+        replied_name = #{record.repliedName,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -177,9 +187,10 @@
     update replay
     set reply_id = #{record.replyId,jdbcType=BIGINT},
       reply_content = #{record.replyContent,jdbcType=VARCHAR},
+      user_id = #{record.userId,jdbcType=BIGINT},
       comment_id = #{record.commentId,jdbcType=BIGINT},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      user_id = #{record.userId,jdbcType=BIGINT}
+      replied_name = #{record.repliedName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -190,14 +201,17 @@
       <if test="replyContent != null">
         reply_content = #{replyContent,jdbcType=VARCHAR},
       </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
       <if test="commentId != null">
         comment_id = #{commentId,jdbcType=BIGINT},
       </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="userId != null">
-        user_id = #{userId,jdbcType=BIGINT},
+      <if test="repliedName != null">
+        replied_name = #{repliedName,jdbcType=VARCHAR},
       </if>
     </set>
     where reply_id = #{replyId,jdbcType=BIGINT}
@@ -205,9 +219,10 @@
   <update id="updateByPrimaryKey" parameterType="org.lis_entity.Replay">
     update replay
     set reply_content = #{replyContent,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=BIGINT},
       comment_id = #{commentId,jdbcType=BIGINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
-      user_id = #{userId,jdbcType=BIGINT}
+      replied_name = #{repliedName,jdbcType=VARCHAR}
     where reply_id = #{replyId,jdbcType=BIGINT}
   </update>
 </mapper>

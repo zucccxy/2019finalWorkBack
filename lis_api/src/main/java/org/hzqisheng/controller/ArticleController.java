@@ -4,10 +4,9 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.hzqisheng.service.ArticleService;
-import org.lis_entity.Article;
-import org.lis_entity.Category;
-import org.lis_entity.User;
+import org.lis_entity.*;
 import org.springframework.context.annotation.Scope;
+import org.springframework.data.map.repository.config.EnableMapRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,30 +33,32 @@ public class ArticleController {
 
     /**
      * 获取标签列表
+     *
      * @return
      */
-    @RequestMapping(value="categoryList",method = RequestMethod.GET)
+    @RequestMapping(value = "categoryList", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object> categoryList(){
-        List<Category> categoryListList=articleService.findCategoryList();
+    public Map<String, Object> categoryList() {
+        List<Category> categoryListList = articleService.findCategoryList();
         log.info("用户注册------------------------------------");
         return ResponseDataUtil.
                 ok().
-                putData("dataList",categoryListList).
+                putData("dataList", categoryListList).
                 build();
     }
 
     /**
      * 获取文章列表
+     *
      * @param pageIndex
      * @param pageSize
      * @param category
      * @return
      */
-   @RequestMapping(value="articleList",method = RequestMethod.GET)
-   @ResponseBody
-    public Map<String,Object> articleList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "5") Integer pageSize,Category category){
-        if(category.getCategoryId() == -1) {
+    @RequestMapping(value = "articleList", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> articleList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "5") Integer pageSize, Category category) {
+        if (category.getCategoryId() == -1) {
             PageHelper.startPage(pageIndex, pageSize);
             List<Article> articleList = articleService.getArticleList();
             Page<Article> page = (Page<Article>) articleList;
@@ -69,9 +70,9 @@ public class ArticleController {
                     putData("pageSize", pageSize).
                     putData("totalCount", page.getTotal()).
                     build();
-        }else{
+        } else {
             PageHelper.startPage(pageIndex, pageSize);
-            List<Article> articleList=articleService.findArticleListByCategory(category.getCategoryId());
+            List<Article> articleList = articleService.findArticleListByCategory(category.getCategoryId());
             Page<Article> page = (Page<Article>) articleList;
             log.info("获取文章列表------------------------------------");
             return ResponseDataUtil.
@@ -81,20 +82,90 @@ public class ArticleController {
                     putData("pageSize", pageSize).
                     putData("totalCount", page.getTotal()).
                     build();
-       }
-   }
+        }
+    }
 
     /**
      * 通过文章id查找文章
+     *
      * @param articleId
      * @return
      */
-    @RequestMapping(value="articleDetail",method = RequestMethod.GET)
+    @RequestMapping(value = "articleDetail", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object> articleDetail(@RequestParam Long articleId){
-        Article article=articleService.findArticleListByArticleId(articleId);
-        return  ResponseDataUtil.ok().
-                putData("data",article).
+    public Map<String, Object> articleDetail(@RequestParam Long articleId) {
+        Article article = articleService.findArticleListByArticleId(articleId);
+        log.info("通过文章id查找文章------------------------------------");
+        return ResponseDataUtil.ok().
+                putData("data", article).
+                build();
+
+    }
+
+    /**
+     * 通过articleId查找相应的标签
+     *
+     * @param articleId
+     * @return
+     */
+    @RequestMapping(value = "articleCategories", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> articleCategories(@RequestParam Long articleId) {
+        List<Category> categoryList = articleService.findArticleCategoryByArticleId(articleId);
+        log.info("通过articleId查找相应的标签------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", categoryList).
+                build();
+    }
+
+    /**
+     * 通过文章的id统计其评论数
+     *
+     * @param articleId
+     * @return
+     */
+    @RequestMapping(value = "articleCommentCount", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> articleCommentCount(@RequestParam Long articleId) {
+        Long count = articleService.countCommentByArticleId(articleId);
+        log.info("通过文章的id统计其评论数------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataCount", count).
+                build();
+    }
+
+    /**
+     * 通过文章id获取评论列表
+     *
+     * @param articleId
+     * @return
+     */
+    @RequestMapping(value = "articleCommentList", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> articleCommentList(@RequestParam Long articleId) {
+        List<CommentResult> commentList = articleService.getCommentListByArticleId(articleId);
+        log.info("通过文章id获取评论列表------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", commentList).
+                build();
+    }
+
+    /**
+     * 通过评论id查找回复
+     * @param commentId
+     * @return
+     */
+    @RequestMapping(value = "commentReplayList", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> commentReplayList(@RequestParam Long commentId) {
+        List<ReplayResult> replayList=articleService.getReplyListByCommentId(commentId);
+        log.info("通过评论id查找回复------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList",replayList).
                 build();
     }
 }

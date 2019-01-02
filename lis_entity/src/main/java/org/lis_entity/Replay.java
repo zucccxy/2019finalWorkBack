@@ -19,6 +19,11 @@ public class Replay implements Serializable {
     private String replyContent;
 
     /**
+     * 回复作者
+     */
+    private Long userId;
+
+    /**
      * 评论id
      */
     private Long commentId;
@@ -29,9 +34,9 @@ public class Replay implements Serializable {
     private Date createTime;
 
     /**
-     * 用户id
+     * 被回复人姓名
      */
-    private Long userId;
+    private String repliedName;
 
     private static final long serialVersionUID = 1L;
 
@@ -51,6 +56,14 @@ public class Replay implements Serializable {
         this.replyContent = replyContent;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
     public Long getCommentId() {
         return commentId;
     }
@@ -67,12 +80,12 @@ public class Replay implements Serializable {
         this.createTime = createTime;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getRepliedName() {
+        return repliedName;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setRepliedName(String repliedName) {
+        this.repliedName = repliedName;
     }
 
     @Override
@@ -89,9 +102,10 @@ public class Replay implements Serializable {
         Replay other = (Replay) that;
         return (this.getReplyId() == null ? other.getReplyId() == null : this.getReplyId().equals(other.getReplyId()))
             && (this.getReplyContent() == null ? other.getReplyContent() == null : this.getReplyContent().equals(other.getReplyContent()))
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
             && (this.getCommentId() == null ? other.getCommentId() == null : this.getCommentId().equals(other.getCommentId()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
-            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()));
+            && (this.getRepliedName() == null ? other.getRepliedName() == null : this.getRepliedName().equals(other.getRepliedName()));
     }
 
     @Override
@@ -100,9 +114,10 @@ public class Replay implements Serializable {
         int result = 1;
         result = prime * result + ((getReplyId() == null) ? 0 : getReplyId().hashCode());
         result = prime * result + ((getReplyContent() == null) ? 0 : getReplyContent().hashCode());
+        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         result = prime * result + ((getCommentId() == null) ? 0 : getCommentId().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
+        result = prime * result + ((getRepliedName() == null) ? 0 : getRepliedName().hashCode());
         return result;
     }
 
@@ -114,9 +129,10 @@ public class Replay implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", replyId=").append(replyId);
         sb.append(", replyContent=").append(replyContent);
+        sb.append(", userId=").append(userId);
         sb.append(", commentId=").append(commentId);
         sb.append(", createTime=").append(createTime);
-        sb.append(", userId=").append(userId);
+        sb.append(", repliedName=").append(repliedName);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

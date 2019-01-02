@@ -304,6 +304,19 @@
     select article.article_id as articleId,title,expect,author,read_count as readCount,article.create_time as createTime
 from article_category inner join article on article_category.article__id = article.article_id inner join category on article_category.category_id = category.category_id
 where  article_category.category_id = #{categoryId}
+  </select>
 
+  <select id="selectCommentListByArticleId" parameterType="java.lang.Long" resultType="org.lis_entity.CommentResult">
+    select comment_id as commentId,comment_content as commentContent,title,comment.create_time as createTime,username
+    from comment inner join user on comment.user_id = user.user_id inner join article on comment.article_id = article.article_id
+    where  comment.article_id = #{articleId}
+    order  by comment.create_time
+  </select>
+
+  <select id="selectReplayListByCommentId" parameterType="java.lang.Long" resultType="org.lis_entity.ReplayResult">
+     select reply_id as replyId,reply_content as replyContent,username,replay.create_time as createTime
+    from replay inner join user on replay.user_id = user.user_id inner join comment on replay.comment_id = comment.comment_id
+    where replay.comment_id = #{commentId}
+    order by replay.create_time
   </select>
 </mapper>
