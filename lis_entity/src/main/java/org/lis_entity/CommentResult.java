@@ -28,6 +28,12 @@ public class CommentResult {
      */
     private String username;
 
+    /**
+     * 用户头像地址
+     */
+    private String avatarurl;
+
+
     public CommentResult() {
     }
 
@@ -77,5 +83,13 @@ public class CommentResult {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getAvatarurl() {
+        return avatarurl;
+    }
+
+    public void setAvatarurl(String avatarurl) {
+        this.avatarurl = avatarurl;
     }
 }

@@ -1,12 +1,10 @@
 package org.lis_dao;
 
+import org.lis_entity.*;
+
 import java.util.HashMap;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.lis_entity.Article;
-import org.lis_entity.ArticleExample;
-import org.lis_entity.CommentResult;
-import org.lis_entity.ReplayResult;
 
 public interface ArticleDao {
     long countByExample(ArticleExample example);
@@ -31,14 +29,20 @@ public interface ArticleDao {
 
     int updateByPrimaryKey(Article record);
 
+    List<ArticleResult> selectByArticleResultCondition(HashMap map);
+
+
     List<CommentResult> selectByCommentResultCondition(HashMap map);
 
     List<ReplayResult>  selectByReplayResultCondition(HashMap map);
 
+    ArticleResult selectByArticleResultByArticleId(Long articleId);
+
     List<Article> selectArticleListByCategoryId(Long categoryId);
+
+    List<ArticleResult> selectAllArticleResultList();
 
     List<CommentResult>  selectCommentListByArticleId(Long articleId);
 
     List<ReplayResult> selectReplayListByCommentId(Long commentId);
-
 }

@@ -5,7 +5,7 @@
     <id column="article_id" jdbcType="BIGINT" property="articleId" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="expect" jdbcType="VARCHAR" property="expect" />
-    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="admin_id" jdbcType="BIGINT" property="adminId" />
     <result column="read_count" jdbcType="BIGINT" property="readCount" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -70,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    article_id, title, expect, author, read_count, create_time, update_time, content
+    article_id, title, expect, admin_id, read_count, create_time, update_time, content
   </sql>
   <select id="selectByExample" parameterType="org.lis_entity.ArticleExample" resultMap="BaseResultMap">
     select
@@ -111,10 +111,10 @@
     </if>
   </delete>
   <insert id="insert" keyColumn="article_id" keyProperty="articleId" parameterType="org.lis_entity.Article" useGeneratedKeys="true">
-    insert into article (title, expect, author, 
+    insert into article (title, expect, admin_id, 
       read_count, create_time, update_time, 
       content)
-    values (#{title,jdbcType=VARCHAR}, #{expect,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+    values (#{title,jdbcType=VARCHAR}, #{expect,jdbcType=VARCHAR}, #{adminId,jdbcType=BIGINT}, 
       #{readCount,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{content,jdbcType=VARCHAR})
   </insert>
@@ -127,8 +127,8 @@
       <if test="expect != null">
         expect,
       </if>
-      <if test="author != null">
-        author,
+      <if test="adminId != null">
+        admin_id,
       </if>
       <if test="readCount != null">
         read_count,
@@ -150,8 +150,8 @@
       <if test="expect != null">
         #{expect,jdbcType=VARCHAR},
       </if>
-      <if test="author != null">
-        #{author,jdbcType=VARCHAR},
+      <if test="adminId != null">
+        #{adminId,jdbcType=BIGINT},
       </if>
       <if test="readCount != null">
         #{readCount,jdbcType=BIGINT},
@@ -185,8 +185,8 @@
       <if test="record.expect != null">
         expect = #{record.expect,jdbcType=VARCHAR},
       </if>
-      <if test="record.author != null">
-        author = #{record.author,jdbcType=VARCHAR},
+      <if test="record.adminId != null">
+        admin_id = #{record.adminId,jdbcType=BIGINT},
       </if>
       <if test="record.readCount != null">
         read_count = #{record.readCount,jdbcType=BIGINT},
@@ -210,7 +210,7 @@
     set article_id = #{record.articleId,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
       expect = #{record.expect,jdbcType=VARCHAR},
-      author = #{record.author,jdbcType=VARCHAR},
+      admin_id = #{record.adminId,jdbcType=BIGINT},
       read_count = #{record.readCount,jdbcType=BIGINT},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP},
@@ -228,8 +228,8 @@
       <if test="expect != null">
         expect = #{expect,jdbcType=VARCHAR},
       </if>
-      <if test="author != null">
-        author = #{author,jdbcType=VARCHAR},
+      <if test="adminId != null">
+        admin_id = #{adminId,jdbcType=BIGINT},
       </if>
       <if test="readCount != null">
         read_count = #{readCount,jdbcType=BIGINT},
@@ -250,13 +250,31 @@
     update article
     set title = #{title,jdbcType=VARCHAR},
       expect = #{expect,jdbcType=VARCHAR},
-      author = #{author,jdbcType=VARCHAR},
+      admin_id = #{adminId,jdbcType=BIGINT},
       read_count = #{readCount,jdbcType=BIGINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       content = #{content,jdbcType=VARCHAR}
     where article_id = #{articleId,jdbcType=BIGINT}
   </update>
+
+  <select id="selectByArticleResultCondition" parameterType="Map" resultType="org.lis_entity.ArticleResult">
+      select article.article_id as articleId,title,expect,admin.admin_id as adminId,read_count as readCount,article.create_time as createTime,article.update_time as updateTime,content,admin_name as adminName,admin_pic as adminPic
+      from article inner join admin on article.admin_id = admin.admin_id
+      <where>
+        <if test="title!=null and title!=''">
+            title like "%"#{title}"%"
+        </if>
+        <if test="expect!=null and expect!=''">
+           AND   expect like "%"#{expect}"%"
+        </if>
+        <if test="adminName!=null and adminName!=''">
+          AND admin_name like "%"#{admin_name}"%"
+        </if>
+        order by admin_name
+      </where>
+  </select>
+
   <select id="selectByCommentResultCondition" parameterType="Map" resultType="org.lis_entity.CommentResult">
     select comment_id as commentId,comment_content as commentContent,title,comment.create_time as createTime,username
     from comment inner join user on comment.user_id = user.user_id inner join article on comment.article_id = article.article_id
@@ -283,9 +301,9 @@
     select reply_id as replyId,reply_content as replyContent,username,replay.create_time as createTime
     from replay inner join user on replay.user_id = user.user_id inner join comment on replay.comment_id = comment.comment_id
     <where>
-     replay.comment_id = #{commentId}
-    <if test="username!=null and username!=''">
-      AND   username like  "%"#{username}"%"
+      replay.comment_id = #{commentId}
+      <if test="username!=null and username!=''">
+        AND   username like  "%"#{username}"%"
       </if>
       <if test="replyContent!=null and replyContent!=''">
         AND reply_content like  "%"#{replyContent}"%"
@@ -301,22 +319,32 @@
   </select>
 
   <select id="selectArticleListByCategoryId" parameterType="java.lang.Long" resultType="org.lis_entity.Article">
-    select article.article_id as articleId,title,expect,author,read_count as readCount,article.create_time as createTime
+    select article.article_id as articleId,title,expect,read_count as readCount,article.create_time as createTime
 from article_category inner join article on article_category.article__id = article.article_id inner join category on article_category.category_id = category.category_id
 where  article_category.category_id = #{categoryId}
   </select>
 
   <select id="selectCommentListByArticleId" parameterType="java.lang.Long" resultType="org.lis_entity.CommentResult">
-    select comment_id as commentId,comment_content as commentContent,title,comment.create_time as createTime,username
+    select comment_id as commentId,comment_content as commentContent,title,comment.create_time as createTime,username,avatarUrl as avatarurl
     from comment inner join user on comment.user_id = user.user_id inner join article on comment.article_id = article.article_id
     where  comment.article_id = #{articleId}
     order  by comment.create_time
   </select>
 
   <select id="selectReplayListByCommentId" parameterType="java.lang.Long" resultType="org.lis_entity.ReplayResult">
-     select reply_id as replyId,reply_content as replyContent,username,replay.create_time as createTime
+     select reply_id as replyId,reply_content as replyContent,username,replay.create_time as createTime,replied_name as repliedName
     from replay inner join user on replay.user_id = user.user_id inner join comment on replay.comment_id = comment.comment_id
     where replay.comment_id = #{commentId}
     order by replay.create_time
+  </select>
+
+  <select id="selectByArticleResultByArticleId" parameterType="java.lang.Long" resultType="org.lis_entity.ArticleResult">
+    select article.article_id as articleId,title,expect,admin.admin_id as adminId,read_count as readCount,article.create_time as createTime,article.update_time as updateTime,content,admin_name as adminName,admin_pic as adminPic
+      from article inner join admin on article.admin_id = admin.admin_id
+      where article.article_id=#{articleId}
+  </select>
+  <select id="selectAllArticleResultList" resultType="org.lis_entity.ArticleResult">
+     select article.article_id as articleId,title,expect,admin.admin_id as adminId,read_count as readCount,article.create_time as createTime,article.update_time as updateTime,content,admin_name as adminName,admin_pic as adminPic
+      from article inner join admin on article.admin_id = admin.admin_id
   </select>
 </mapper>

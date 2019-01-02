@@ -26,6 +26,12 @@ public class ReplayResult {
      */
     private Date createTime;
 
+    /**
+     * 被回复人姓名
+     */
+    private String repliedName;
+
+
     public ReplayResult() {
     }
 
@@ -68,7 +74,13 @@ public class ReplayResult {
         this.createTime = createTime;
     }
 
+    public String getRepliedName() {
+        return repliedName;
+    }
 
+    public void setRepliedName(String repliedName) {
+        this.repliedName = repliedName;
+    }
 
 
 

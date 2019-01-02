@@ -24,9 +24,9 @@ public class Article implements Serializable {
     private String expect;
 
     /**
-     * 博文作者
+     * 管理员id
      */
-    private String author;
+    private Long adminId;
 
     /**
      * 博文阅读量
@@ -74,12 +74,12 @@ public class Article implements Serializable {
         this.expect = expect;
     }
 
-    public String getAuthor() {
-        return author;
+    public Long getAdminId() {
+        return adminId;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAdminId(Long adminId) {
+        this.adminId = adminId;
     }
 
     public Long getReadCount() {
@@ -129,7 +129,7 @@ public class Article implements Serializable {
         return (this.getArticleId() == null ? other.getArticleId() == null : this.getArticleId().equals(other.getArticleId()))
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getExpect() == null ? other.getExpect() == null : this.getExpect().equals(other.getExpect()))
-            && (this.getAuthor() == null ? other.getAuthor() == null : this.getAuthor().equals(other.getAuthor()))
+            && (this.getAdminId() == null ? other.getAdminId() == null : this.getAdminId().equals(other.getAdminId()))
             && (this.getReadCount() == null ? other.getReadCount() == null : this.getReadCount().equals(other.getReadCount()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
             && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()))
@@ -143,7 +143,7 @@ public class Article implements Serializable {
         result = prime * result + ((getArticleId() == null) ? 0 : getArticleId().hashCode());
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getExpect() == null) ? 0 : getExpect().hashCode());
-        result = prime * result + ((getAuthor() == null) ? 0 : getAuthor().hashCode());
+        result = prime * result + ((getAdminId() == null) ? 0 : getAdminId().hashCode());
         result = prime * result + ((getReadCount() == null) ? 0 : getReadCount().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         result = prime * result + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
@@ -160,7 +160,7 @@ public class Article implements Serializable {
         sb.append(", articleId=").append(articleId);
         sb.append(", title=").append(title);
         sb.append(", expect=").append(expect);
-        sb.append(", author=").append(author);
+        sb.append(", adminId=").append(adminId);
         sb.append(", readCount=").append(readCount);
         sb.append(", createTime=").append(createTime);
         sb.append(", updateTime=").append(updateTime);

@@ -60,8 +60,8 @@ public class ArticleController {
     public Map<String, Object> articleList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "5") Integer pageSize, Category category) {
         if (category.getCategoryId() == -1) {
             PageHelper.startPage(pageIndex, pageSize);
-            List<Article> articleList = articleService.getArticleList();
-            Page<Article> page = (Page<Article>) articleList;
+            List<ArticleResult> articleList = articleService.getArticleList();
+            Page<ArticleResult> page = (Page<ArticleResult>) articleList;
             log.info("获取文章列表------------------------------------");
             return ResponseDataUtil.
                     ok().
@@ -74,10 +74,14 @@ public class ArticleController {
             PageHelper.startPage(pageIndex, pageSize);
             List<Article> articleList = articleService.findArticleListByCategory(category.getCategoryId());
             Page<Article> page = (Page<Article>) articleList;
+            List<ArticleResult> articleResultList=new ArrayList<>();
+            for(Article article : articleList){
+                articleResultList.add(articleService.findArticleResultByArticle(article));
+            }
             log.info("获取文章列表------------------------------------");
             return ResponseDataUtil.
                     ok().
-                    putData("dataList", articleList).
+                    putData("dataList", articleResultList).
                     putData("pageIndex", pageIndex).
                     putData("pageSize", pageSize).
                     putData("totalCount", page.getTotal()).
@@ -155,17 +159,104 @@ public class ArticleController {
 
     /**
      * 通过评论id查找回复
+     *
      * @param commentId
      * @return
      */
     @RequestMapping(value = "commentReplayList", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> commentReplayList(@RequestParam Long commentId) {
-        List<ReplayResult> replayList=articleService.getReplyListByCommentId(commentId);
+        List<ReplayResult> replayList = articleService.getReplyListByCommentId(commentId);
         log.info("通过评论id查找回复------------------------------------");
         return ResponseDataUtil.
                 ok().
-                putData("dataList",replayList).
+                putData("dataList", replayList).
                 build();
     }
+
+    /**
+     * 增加文章的阅读量
+     *
+     * @param articleId
+     * @return
+     */
+    @RequestMapping(value = "addReadCount", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> addReadCount(@RequestParam Long articleId) {
+        articleService.addReadCountByArticleId(articleId);
+        log.info("增加文章的阅读量------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
+    /**
+     * 判断文章是否被用户收藏
+     *
+     * @param articleId
+     * @param userId
+     * @return
+     */
+    @RequestMapping(value = "getIsCollect", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getIsCollect(@RequestParam Long articleId, @RequestParam Long userId) {
+        boolean result = articleService.findCollectionByArticleIdAndUserId(articleId, userId);
+        log.info("判断文章是否被用户收藏------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataResult", result).
+                build();
+    }
+
+    /**
+     * 用户取消或者增加收藏
+     *
+     * @param articleId
+     * @param userId
+     * @param collectionResult
+     * @return
+     */
+    @RequestMapping(value = "collectionAction", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> collectionAction(Long articleId, Long userId, boolean collectionResult) {
+        String result = articleService.addOrDeleteCollectionByArticleIdAndUserIdAndCollectionResult(articleId, userId, collectionResult);
+        log.info("用户取消或者增加收藏------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataResult", result).
+                build();
+    }
+
+    /**
+     * 增加评论
+     *
+     * @param comment
+     * @return
+     */
+    @RequestMapping(value = "addComment", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> addComment(Comment comment) {
+        articleService.addComment(comment);
+        log.info("增加评论------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
+    /**
+     * 增加回复
+     *
+     * @param replay
+     * @return
+     */
+    @RequestMapping(value = "addReplay", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> addReplay(Replay replay) {
+        articleService.addReplay(replay);
+        log.info("增加回复------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
 }

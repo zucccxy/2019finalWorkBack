@@ -26,7 +26,7 @@ public class MyWebAppConfigurer
                "/api/article/categoryList","/api/article/articleList",
                "/api/article/articleDetail","/api/article/articleCategories",
                "/api/article/articleCommentCount","/api/article/articleCommentList",
-               "/api/article/commentReplayList");
+               "/api/article/commentReplayList","/api/article/addReadCount");
        super.addInterceptors(registry);
     }
 

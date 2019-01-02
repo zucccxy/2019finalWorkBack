@@ -1,16 +1,14 @@
 package org.hzqisheng.service.Impl;
 
 import org.hzqisheng.service.ArticleService;
-import org.lis_dao.ArticleCategoryDao;
-import org.lis_dao.ArticleDao;
-import org.lis_dao.CategoryDao;
-import org.lis_dao.CommentDao;
+import org.lis_dao.*;
 import org.lis_entity.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,6 +25,10 @@ public class ArticleServiceImpl implements ArticleService {
     ArticleCategoryDao articleCategoryDao;
     @Resource
     CommentDao commentDao;
+    @Resource
+    CollectionDao collectionDao;
+    @Resource
+    ReplayDao replayDao;
     @Override
     public List<Category> findCategoryList() {
         CategoryExample categoryExample = new CategoryExample();
@@ -34,9 +36,8 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> getArticleList() {
-        ArticleExample articleExample = new ArticleExample();
-        return articleDao.selectByExample(articleExample);
+    public List<ArticleResult> getArticleList() {
+        return articleDao.selectAllArticleResultList();
     }
 
     @Override
@@ -47,6 +48,11 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Article findArticleListByArticleId(Long articleId) {
         return articleDao.selectByPrimaryKey(articleId);
+    }
+
+    @Override
+    public ArticleResult findArticleResultByArticle(Article article) {
+        return articleDao.selectByArticleResultByArticleId(article.getArticleId());
     }
 
     @Override
@@ -62,7 +68,6 @@ public class ArticleServiceImpl implements ArticleService {
         }
         return categoryList;
     }
-
     @Override
     public long  countCommentByArticleId(Long articleId) {
         CommentExample commentExample=new CommentExample();
@@ -79,6 +84,56 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public List<ReplayResult> getReplyListByCommentId(Long commentId) {
         return articleDao.selectReplayListByCommentId(commentId);
+    }
+
+    @Override
+    public boolean addReadCountByArticleId(Long articleId) {
+        Article article=articleDao.selectByPrimaryKey(articleId);
+        Long articleReadCount=article.getReadCount();
+        articleReadCount=articleReadCount+1;
+        article.setReadCount(articleReadCount);
+        return articleDao.updateByPrimaryKeySelective(article) > 0;
+    }
+
+    @Override
+    public boolean findCollectionByArticleIdAndUserId(Long articleId, Long userId) {
+        CollectionExample collectionExample=new CollectionExample();
+        CollectionExample.Criteria criteria=collectionExample.createCriteria();
+        criteria.andArticleIdEqualTo(articleId);
+        criteria.andUserIdEqualTo(userId);
+        return collectionDao.countByExample(collectionExample) > 0;
+    }
+
+    @Override
+    public String  addOrDeleteCollectionByArticleIdAndUserIdAndCollectionResult(Long articleId, Long userId, boolean collectionResult) {
+        if(collectionResult) {
+           CollectionExample collectionExample=new CollectionExample();
+           CollectionExample.Criteria criteria=collectionExample.createCriteria();
+           criteria.andUserIdEqualTo(userId);
+           criteria.andArticleIdEqualTo(articleId);
+           collectionDao.deleteByExample(collectionExample);
+            return "noCollect";
+        }else{
+            Collection collection = new Collection();
+            collection.setArticleId(articleId);
+            collection.setUserId(userId);
+            collection.setCreateTime(new Date());
+            collectionDao.insertSelective(collection);
+            return "collect";
+        }
+
+    }
+
+    @Override
+    public boolean addComment(Comment comment) {
+        comment.setCreateTime(new Date());
+        return commentDao.insertSelective(comment) > 0;
+    }
+
+    @Override
+    public boolean addReplay(Replay replay) {
+        replay.setCreateTime(new Date());
+        return replayDao.insertSelective(replay) > 0;
     }
 }
 
