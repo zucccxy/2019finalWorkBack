@@ -1,7 +1,12 @@
 package org.hzqisheng.service;
 
+import org.lis_entity.CollectionResult;
 import org.lis_entity.Feedback;
+import org.lis_entity.Sign;
 import org.lis_entity.User;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author thlnkpad
@@ -31,4 +36,34 @@ public interface UserService {
      * @return
      */
     public boolean addFeedback(Feedback feedback);
+
+    /**
+     * 通过userId获取收藏列表
+     *
+     * @param userId
+     * @return
+     */
+    public List<CollectionResult> getCollectionResultListByUserId(Long userId);
+
+    /**
+     * 增加一条签到记录
+     *
+     * @param sign
+     */
+    public boolean addSign(Sign sign);
+
+    /**
+     * 统计用户签到天数
+     *
+     * @param userId
+     * @return
+     */
+    public Long countSign(Long userId);
+
+    /**
+     * 判断用户是否可以签到
+     * @param userId
+     * @return
+     */
+    public Map<String,Object> judgeIsSign(Long userId);
 }

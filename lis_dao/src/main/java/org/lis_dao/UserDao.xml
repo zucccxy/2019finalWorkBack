@@ -274,4 +274,10 @@
     </where>
     order by username
 </select>
+
+  <select id="selectAllCollectionResultByUserId" parameterType="java.lang.Long" resultType="org.lis_entity.CollectionResult">
+    select username,collection_id as collectionId,title,collection.create_time as createTime,article.article_id as articleId
+    from collection inner join user on collection.user_id = user.user_id  inner join article on collection.article_id = article.article_id
+    where user.user_id = #{userId}
+  </select>
 </mapper>

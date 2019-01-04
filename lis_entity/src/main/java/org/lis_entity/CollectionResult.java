@@ -24,14 +24,28 @@ public class CollectionResult {
      */
     private Date createTime;
 
+    /**
+     * 博文id
+     */
+    private Long articleId;
+
     public CollectionResult() {
     }
 
-    public CollectionResult(Long collectionId, String title, String username, Date createTime) {
+    public CollectionResult(Long collectionId, String title, String username, Date createTime, Long articleId) {
         this.collectionId = collectionId;
         this.title = title;
         this.username = username;
         this.createTime = createTime;
+        this.articleId = articleId;
+    }
+
+    public Long getArticleId() {
+        return articleId;
+    }
+
+    public void setArticleId(Long articleId) {
+        this.articleId = articleId;
     }
 
     public Long getCollectionId() {

@@ -35,4 +35,6 @@ public interface UserDao {
 
     List<CollectionResult> selectByCollectionCondition(HashMap map);
 
+    List<CollectionResult> selectAllCollectionResultByUserId(Long userId);
+
 }
