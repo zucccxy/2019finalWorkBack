@@ -29,6 +29,10 @@ public class ArticleServiceImpl implements ArticleService {
     CollectionDao collectionDao;
     @Resource
     ReplayDao replayDao;
+    @Resource
+    UserDao userDao;
+    @Resource
+    NewsDao newsDao;
     @Override
     public List<Category> findCategoryList() {
         CategoryExample categoryExample = new CategoryExample();
@@ -134,6 +138,19 @@ public class ArticleServiceImpl implements ArticleService {
     public boolean addReplay(Replay replay) {
         replay.setCreateTime(new Date());
         return replayDao.insertSelective(replay) > 0;
+    }
+
+    @Override
+    public boolean addNew(News news, String repliedName) {
+        UserExample userExample=new UserExample();
+        UserExample.Criteria criteria=userExample.createCriteria();
+        criteria.andUsernameEqualTo(repliedName);
+        List<User> userList=userDao.selectByExample(userExample);
+        User user=userList.get(0);
+        news.setUserId(user.getUserId());
+        news.setStatus(0);
+        news.setCreateTime(new Date());
+        return newsDao.insertSelective(news) > 0;
     }
 }
 

@@ -1,6 +1,7 @@
 package org.hzqisheng.service;
 
 import org.lis_entity.Article;
+import org.lis_entity.ArticleResult;
 import org.lis_entity.CommentResult;
 import org.lis_entity.ReplayResult;
 
@@ -17,20 +18,20 @@ public interface ArticleService {
      * @param title
      * @param expect
      * @param author
-     * @param createTime
-     * @param updateTime
+     * @param startTime
+     * @param endTime
      * @return
      */
-    public List<Article>  findArticleList(String title, String expect, String author, Date createTime,Date updateTime);
+    public List<ArticleResult>  findArticleList(String title, String expect, String author, Date startTime, Date endTime);
 
     /**
      * 新增博文
-     * @param author
+     * @param adminId
      * @param article
      * @param categoryIds
      * @return
      */
-    public boolean addArticle(String author,Article article,  Long[] categoryIds);
+    public boolean addArticle(Long  adminId,Article article,  Long[] categoryIds);
 
     /**
      * 更新博文

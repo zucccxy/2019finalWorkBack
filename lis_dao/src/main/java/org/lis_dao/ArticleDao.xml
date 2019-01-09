@@ -269,10 +269,17 @@
            AND   expect like "%"#{expect}"%"
         </if>
         <if test="adminName!=null and adminName!=''">
-          AND admin_name like "%"#{admin_name}"%"
+          AND admin_name like "%"#{adminName}"%"
         </if>
+        <if test="startTime!=null">
+          AND article.update_time &gt;= #{startTime}
+        </if>
+        <if test="endTime!=null">
+          AND article.update_time &lt;= #{endTime}
+        </if>
+       </where>
         order by admin_name
-      </where>
+
   </select>
 
   <select id="selectByCommentResultCondition" parameterType="Map" resultType="org.lis_entity.CommentResult">

@@ -2,10 +2,13 @@ package org.hzqisheng.service.Impl;
 
 import org.hzqisheng.service.UserService;
 import org.lis_dao.FeedbackDao;
+import org.lis_dao.NewsDao;
 import org.lis_dao.SignDao;
 import org.lis_dao.UserDao;
 import org.lis_entity.*;
+import org.springframework.messaging.simp.user.UserRegistryMessageHandler;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.util.DateUtil;
 import org.util.StringUtil;
 
@@ -28,6 +31,8 @@ public class UserServiceImpl implements UserService{
     FeedbackDao feedbackDao;
     @Resource
     SignDao signDao;
+    @Resource
+    NewsDao newsDao;
     @Override
     public User findUserByAccount(String account) {
         UserExample userExample=new UserExample();
@@ -76,6 +81,7 @@ public class UserServiceImpl implements UserService{
         Map<String,Object> resultMap=new HashMap<>();
         SignExample signExample=new SignExample();
         SignExample.Criteria criteria=signExample.createCriteria();
+        criteria.andUserIdEqualTo(userId);
         criteria.andSignTimeGreaterThanOrEqualTo(DateUtil.getCurrentDay());
         try {
             criteria.andSignTimeLessThanOrEqualTo(DateUtil.getTodayfinish(new Date()));
@@ -92,5 +98,59 @@ public class UserServiceImpl implements UserService{
             resultMap.put("resultData",signList);
             return resultMap;
         }
+    }
+
+    @Override
+    public List<News> findNewsList(Long userId) {
+        NewsExample newsExample=new NewsExample();
+        NewsExample.Criteria criteria=newsExample.createCriteria();
+        criteria.andUserIdEqualTo(userId);
+        return newsDao.selectByExample(newsExample);
+    }
+
+    @Override
+    public Long countUnReadNew(Long userId) {
+        NewsExample newsExample=new NewsExample();
+        NewsExample.Criteria criteria=newsExample.createCriteria();
+        criteria.andUserIdEqualTo(userId);
+        criteria.andStatusEqualTo(0);
+        return newsDao.countByExample(newsExample);
+    }
+
+    @Override
+    public boolean updateNewStatus(Long userId) {
+        NewsExample newsExample=new NewsExample();
+        NewsExample.Criteria criteria=newsExample.createCriteria();
+        criteria.andUserIdEqualTo(userId);
+        criteria.andStatusEqualTo(0);
+        News news=new News();
+        news.setStatus(1);
+        return  newsDao.updateByExampleSelective(news,newsExample) > 0;
+    }
+
+    @Override
+    public boolean updateUser(User user) {
+        return userDao.updateByPrimaryKeySelective(user) > 0;
+    }
+
+    @Override
+    public List<User> findUserByUserAccount(String account) {
+        UserExample userExample=new UserExample();
+        UserExample.Criteria criteria=userExample.createCriteria();
+        criteria.andAccountEqualTo(account);
+        return userDao.selectByExample(userExample);
+    }
+
+    @Override
+    public List<User> findUserByUsername(String username) {
+        UserExample userExample=new UserExample();
+        UserExample.Criteria  criteria=userExample.createCriteria();
+        criteria.andUsernameEqualTo(username);
+        return userDao.selectByExample(userExample);
+    }
+
+    @Override
+    public boolean deleteNews(Long newsId) {
+        return newsDao.deleteByPrimaryKey(newsId) > 0;
     }
 }

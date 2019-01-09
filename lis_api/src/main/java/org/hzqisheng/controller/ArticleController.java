@@ -74,8 +74,8 @@ public class ArticleController {
             PageHelper.startPage(pageIndex, pageSize);
             List<Article> articleList = articleService.findArticleListByCategory(category.getCategoryId());
             Page<Article> page = (Page<Article>) articleList;
-            List<ArticleResult> articleResultList=new ArrayList<>();
-            for(Article article : articleList){
+            List<ArticleResult> articleResultList = new ArrayList<>();
+            for (Article article : articleList) {
                 articleResultList.add(articleService.findArticleResultByArticle(article));
             }
             log.info("获取文章列表------------------------------------");
@@ -254,6 +254,23 @@ public class ArticleController {
     public Map<String, Object> addReplay(Replay replay) {
         articleService.addReplay(replay);
         log.info("增加回复------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                build();
+    }
+
+    /**
+     * 发送消息
+     *
+     * @param news
+     * @param repliedName
+     * @return
+     */
+    @RequestMapping(value = "addNews", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> addNews(News news, String repliedName) {
+        articleService.addNew(news, repliedName);
+        log.info("发送消息------------------------------------");
         return ResponseDataUtil.
                 ok().
                 build();

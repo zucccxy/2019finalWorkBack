@@ -47,8 +47,8 @@ public class ArticleController {
     public Map<String,Object>  findArticleList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
                                                String title, String expect, String author, Date startTime, Date endTime){
             PageHelper.startPage(pageIndex, pageSize);
-            List<Article> articleList = articleService.findArticleList(title,expect,author,startTime,endTime);
-            Page<Article> page = (Page<Article>) articleList;
+            List<ArticleResult> articleList = articleService.findArticleList(title,expect,author,startTime,endTime);
+            Page<ArticleResult> page = (Page<ArticleResult>) articleList;
             log.info("博文列表查询------------------------------------");
             return ResponseDataUtil.
                     ok().
@@ -69,8 +69,8 @@ public class ArticleController {
     @ResponseBody
         public Map<String,Object> addArticle(HttpSession session,Article article, Long[] categoryIds){
         Admin currentAdim=(Admin)session.getAttribute("currAdmin");
-        String author=currentAdim.getAdminName();
-        articleService.addArticle(author,article,categoryIds);
+        Long adminId=currentAdim.getAdminId();
+        articleService.addArticle(adminId,article,categoryIds);
         log.info("新增博文------------------------------------");
         return ResponseDataUtil.
                 ok().

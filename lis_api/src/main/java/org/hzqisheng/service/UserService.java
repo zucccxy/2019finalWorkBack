@@ -1,9 +1,6 @@
 package org.hzqisheng.service;
 
-import org.lis_entity.CollectionResult;
-import org.lis_entity.Feedback;
-import org.lis_entity.Sign;
-import org.lis_entity.User;
+import org.lis_entity.*;
 
 import java.util.List;
 import java.util.Map;
@@ -66,4 +63,52 @@ public interface UserService {
      * @return
      */
     public Map<String,Object> judgeIsSign(Long userId);
+
+    /**
+     * 获取消息列表
+     */
+    public List<News> findNewsList(Long userId);
+
+    /**
+     * 获取未读消息
+     * @param userId
+     * @return
+     */
+    public Long  countUnReadNew(Long userId);
+
+    /**
+     * 更新消息状态
+     * @param userId
+     * @return
+     */
+    public boolean  updateNewStatus(Long userId);
+
+    /**
+     * 更新用户
+     * @param user
+     * @return
+     */
+    public boolean  updateUser(User user);
+
+    /**
+     * 通过账户名查找用户
+     * @param account
+     * @return
+     */
+    public List<User> findUserByUserAccount(String account);
+
+    /**
+     * 通过用户名查找用户
+     * @param username
+     * @return
+     */
+    public List<User> findUserByUsername(String username);
+
+    /**
+     * 删除消息
+     * @param newsId
+     * @return
+     */
+    public boolean deleteNews(Long newsId);
+
 }

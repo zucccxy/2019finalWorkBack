@@ -106,4 +106,12 @@ public interface ArticleService {
      * @return
      */
     public boolean addReplay(Replay replay);
+
+    /**
+     * 发送通知
+     * @param news
+     * @param repliedName
+     * @return
+     */
+    public boolean addNew(News news,String repliedName);
 }

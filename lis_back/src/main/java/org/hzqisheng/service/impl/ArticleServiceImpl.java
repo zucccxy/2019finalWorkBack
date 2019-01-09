@@ -1,5 +1,6 @@
 package org.hzqisheng.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.hzqisheng.service.ArticleService;
 import org.lis_dao.*;
 import org.lis_entity.*;
@@ -16,6 +17,7 @@ import java.util.List;
  * @Date 2018/12/19 9:43
  **/
 @Service("articleService")
+@Slf4j
 public class ArticleServiceImpl implements ArticleService {
     @Resource
     ArticleDao articleDao;
@@ -27,7 +29,7 @@ public class ArticleServiceImpl implements ArticleService {
     CommentDao commentDao;
     @Resource
     ReplayDao replayDao;
-    public List<Article> findArticleList(String title, String expect, String author, Date startTime, Date endTime){
+    public List<ArticleResult> findArticleList(String title, String expect, String author, Date startTime, Date endTime){
 //        ArticleExample articleExample=new ArticleExample();
 //        ArticleExample.Criteria criteria=articleExample.createCriteria();
 //        if(null!=title&&!"".equals(title)){
@@ -47,47 +49,53 @@ public class ArticleServiceImpl implements ArticleService {
 //       }
 //       articleExample.setOrderByClause("author");
 //        return articleDao.selectByExample(articleExample);
-        return null;
+        HashMap<String,Object> map=new HashMap<>();
+        map.put("title",title);
+        map.put("expect",expect);
+        map.put("adminName",author);
+        map.put("startTime",startTime);
+        map.put("endTime",endTime);
+        return articleDao.selectByArticleResultCondition(map);
     }
 
 
     @Override
-    public boolean addArticle(String  author,Article article,  Long[] categoryIds) {
-//        Date date=new Date();
-//        article.setAuthor(author);
-//        article.setReadCount(0L);
-//        article.setCreateTime(date);
-//        article.setUpdateTime(date);
-//        articleDao.updateByPrimaryKeySelective(article);
-//        Long articleId=article.getArticleId();
-//        if(null!=categoryIds && categoryIds.length!=0) {
-//            for (Long categoryId : categoryIds) {
-//                ArticleCategory articleCategory = new ArticleCategory();
-//                articleCategory.setArticleId(articleId);
-//                articleCategory.setCategoryId(categoryId);
-//                articleCategoryDao.insertSelective(articleCategory);
-//            }
-//        }
+    public boolean addArticle(Long  adminId,Article article,  Long[] categoryIds) {
+        Date date=new Date();
+        article.setAdminId(adminId);
+        article.setReadCount(0L);
+        article.setCreateTime(date);
+        article.setUpdateTime(date);
+        articleDao.insertSelective(article);
+        Long articleId=article.getArticleId();
+        if(null!=categoryIds && categoryIds.length!=0) {
+            for (Long categoryId : categoryIds) {
+                ArticleCategory articleCategory = new ArticleCategory();
+                articleCategory.setArticleId(articleId);
+                articleCategory.setCategoryId(categoryId);
+                articleCategoryDao.insertSelective(articleCategory);
+            }
+        }
        return true;
     }
 
     @Override
     public boolean updateArticle(Article article, Long[] categoryIds) {
-//        Long articleId=article.getArticleId();
-//        article.setUpdateTime(new Date());
-//        articleDao.updateByPrimaryKeySelective(article);
-//        if(null!=categoryIds && categoryIds.length!=0){
-//            ArticleCategoryExample articleCategoryExample=new ArticleCategoryExample();
-//            ArticleCategoryExample.Criteria criteria=articleCategoryExample.createCriteria();
-//            criteria.andArticleIdEqualTo(articleId);
-//            articleCategoryDao.deleteByExample(articleCategoryExample);
-//            for (Long categoryId : categoryIds) {
-//                ArticleCategory articleCategory = new ArticleCategory();
-//                articleCategory.setArticleId(articleId);
-//                articleCategory.setCategoryId(categoryId);
-//                articleCategoryDao.insertSelective(articleCategory);
-//            }
-//        }
+        Long articleId=article.getArticleId();
+        article.setUpdateTime(new Date());
+        articleDao.updateByPrimaryKeySelective(article);
+        if(null!=categoryIds && categoryIds.length!=0){
+            ArticleCategoryExample articleCategoryExample=new ArticleCategoryExample();
+            ArticleCategoryExample.Criteria criteria=articleCategoryExample.createCriteria();
+            criteria.andArticleIdEqualTo(articleId);
+            articleCategoryDao.deleteByExample(articleCategoryExample);
+            for (Long categoryId : categoryIds) {
+                ArticleCategory articleCategory = new ArticleCategory();
+                articleCategory.setArticleId(articleId);
+                articleCategory.setCategoryId(categoryId);
+                articleCategoryDao.insertSelective(articleCategory);
+            }
+        }
             return true;
     }
 
