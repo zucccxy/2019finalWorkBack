@@ -280,4 +280,24 @@
     from collection inner join user on collection.user_id = user.user_id  inner join article on collection.article_id = article.article_id
     where user.user_id = #{userId}
   </select>
+
+  <select id="selectNewsByCollectionCondition" parameterType="Map" resultType="org.lis_entity.NewsResult">
+    select news_id as newsId,news.user_id as userId,username,news.article_id as articleId,status,news_content as newsContent,news.create_time as createTime
+    from news inner join user on  news.user_id = user.user_id
+    <where>
+      <if test="username!=null and username !=''">
+        username like  "%"#{username}"%"
+      </if>
+      <if test="status!=null">
+         AND status =  #{status}
+      </if>
+      <if test="startTime!=null">
+        AND  news.create_time &gt;=  #{startTime}
+      </if>
+      <if test="endTime!=null">
+        AND  news.create_time  &lt;=  #{endTime}
+      </if>
+    </where>
+    order by  username
+  </select>
 </mapper>

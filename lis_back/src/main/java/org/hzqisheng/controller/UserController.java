@@ -35,6 +35,7 @@ public class UserController {
 
     /**
      * 用户列表
+     *
      * @param pageIndex
      * @param pageSize
      * @param userAccount
@@ -42,31 +43,32 @@ public class UserController {
      * @param userLevel
      * @return
      */
-    @RequestMapping(value="userList",method = RequestMethod.GET)
+    @RequestMapping(value = "userList", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> findUserList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
-                                             String userAccount, String userName, Integer userLevel) {
-            PageHelper.startPage(pageIndex, pageSize);
-            List<User> userList = userService.findUserList(userAccount, userName, userLevel);
-            Page<User> page = (Page<User>) userList;
-            log.info("用户列表查询------------------------------------");
-            return ResponseDataUtil.
-                    ok().
-                    putData("dataList", userList).
-                    putData("pageIndex", pageIndex).
-                    putData("pageSize", pageSize).
-                    putData("totalCount", page.getTotal()).
-                    build();
+                                            String userAccount, String userName, Integer userLevel) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<User> userList = userService.findUserList(userAccount, userName, userLevel);
+        Page<User> page = (Page<User>) userList;
+        log.info("用户列表查询------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", userList).
+                putData("pageIndex", pageIndex).
+                putData("pageSize", pageSize).
+                putData("totalCount", page.getTotal()).
+                build();
     }
 
     /**
      * 删除用户
+     *
      * @param user
      * @return
      */
-    @RequestMapping(value="delUser",method = RequestMethod.POST)
+    @RequestMapping(value = "delUser", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> delUser(User user){
+    public Map<String, Object> delUser(User user) {
         userService.delUser(user.getUserId());
         log.info("删除用户------------------------------------");
         return ResponseDataUtil.
@@ -76,12 +78,13 @@ public class UserController {
 
     /**
      * 增加用户
+     *
      * @param user
      * @return
      */
     @RequestMapping(value = "addUser", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> addUser(User  user) {
+    public Map<String, Object> addUser(User user) {
         userService.addUser(user);
         log.info("新增用户------------------------------------");
         return ResponseDataUtil.
@@ -92,6 +95,7 @@ public class UserController {
 
     /**
      * 修改用户信息
+     *
      * @param user
      * @return
      */
@@ -111,6 +115,7 @@ public class UserController {
 
     /**
      * 用户签到列表
+     *
      * @param pageIndex
      * @param pageSize
      * @param username
@@ -118,10 +123,10 @@ public class UserController {
      * @param endTime
      * @return
      */
-    @RequestMapping(value="signList",method = RequestMethod.GET)
+    @RequestMapping(value = "signList", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> findSignList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
-                                            String username, Date startTime,Date endTime) {
+                                            String username, Date startTime, Date endTime) {
         PageHelper.startPage(pageIndex, pageSize);
         List<SignResult> signList = userService.findSignList(username, startTime, endTime);
         Page<SignResult> page = (Page<SignResult>) signList;
@@ -137,12 +142,13 @@ public class UserController {
 
     /**
      * 删除签到记录
+     *
      * @param signId
      * @return
      */
-    @RequestMapping(value="delSign",method = RequestMethod.POST)
+    @RequestMapping(value = "delSign", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> delSign(Long signId){
+    public Map<String, Object> delSign(Long signId) {
         userService.delSign(signId);
         log.info("删除标签------------------------------------");
         return ResponseDataUtil.
@@ -152,6 +158,7 @@ public class UserController {
 
     /**
      * 获取反馈列表
+     *
      * @param pageIndex
      * @param pageSize
      * @param username
@@ -159,10 +166,10 @@ public class UserController {
      * @param endTime
      * @return
      */
-    @RequestMapping(value="feedbackList",method = RequestMethod.GET)
+    @RequestMapping(value = "feedbackList", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> findFeedbackList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
-                                            String username, Date startTime,Date endTime) {
+                                                String username, Date startTime, Date endTime) {
         PageHelper.startPage(pageIndex, pageSize);
         List<FeedbackResult> feedbackList = userService.findFeedbackList(username, startTime, endTime);
         Page<FeedbackResult> page = (Page<FeedbackResult>) feedbackList;
@@ -178,12 +185,13 @@ public class UserController {
 
     /**
      * 删除反馈
+     *
      * @param feedbackId
      * @return
      */
-    @RequestMapping(value="delFeedback",method = RequestMethod.POST)
+    @RequestMapping(value = "delFeedback", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> delFeedback(Long feedbackId){
+    public Map<String, Object> delFeedback(Long feedbackId) {
         userService.delFeedback(feedbackId);
         log.info("删除反馈------------------------------------");
         return ResponseDataUtil.
@@ -193,6 +201,7 @@ public class UserController {
 
     /**
      * 获取用户收藏列表
+     *
      * @param pageIndex
      * @param pageSize
      * @param username
@@ -201,12 +210,12 @@ public class UserController {
      * @param endTime
      * @return
      */
-    @RequestMapping(value="collectionList",method = RequestMethod.GET)
+    @RequestMapping(value = "collectionList", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> findCollectionList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
-                                                String username,String title,Date startTime,Date endTime) {
+                                                  String username, String title, Date startTime, Date endTime) {
         PageHelper.startPage(pageIndex, pageSize);
-        List<CollectionResult> collectionList = userService.findCollectionResut(username,title,startTime, endTime);
+        List<CollectionResult> collectionList = userService.findCollectionResut(username, title, startTime, endTime);
         Page<CollectionResult> page = (Page<CollectionResult>) collectionList;
         log.info("用户收藏列表查询------------------------------------");
         return ResponseDataUtil.
@@ -220,16 +229,59 @@ public class UserController {
 
     /**
      * 删除收藏记录
+     *
      * @param collectionId
      * @return
      */
-    @RequestMapping(value="delCollection",method = RequestMethod.POST)
+    @RequestMapping(value = "delCollection", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> delCollection(Long collectionId){
+    public Map<String, Object> delCollection(Long collectionId) {
         userService.delCollection(collectionId);
         log.info("删除收藏记录------------------------------------");
         return ResponseDataUtil.
                 ok().
                 build();
     }
+
+    /**
+     * 获取消息列表
+     *
+     * @param pageIndex
+     * @param pageSize
+     * @param username
+     * @param status
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    @RequestMapping(value = "newsList", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> newsList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
+                                        String username, Integer status, Date startTime, Date endTime) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<NewsResult> newsResultList = userService.findNewsResult(username, status, startTime, endTime);
+        Page<NewsResult> page = (Page<NewsResult>) newsResultList;
+        log.info("获取消息列表------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", newsResultList).
+                putData("pageIndex", pageIndex).
+                putData("pageSize", pageSize).
+                putData("totalCount", page.getTotal()).
+                build();
+    }
+
+    /**
+     * 删除消息记录
+     * @return
+     */
+      @RequestMapping(value="delNews",method = RequestMethod.POST)
+        @ResponseBody
+        public Map<String,Object> delNews(@RequestParam Long newsId){
+              userService.delNew(newsId);
+              log.info("删除消息记录------------------------------------");
+              return ResponseDataUtil.
+                      ok().
+                      build();
+          }
 }

@@ -111,4 +111,11 @@ public interface UserService {
      */
     public boolean deleteNews(Long newsId);
 
+    /**
+     * 通过用户ID查找用户
+     * @param userId
+     * @return
+     */
+    public User findUserByUserId(Long userId);
+
 }

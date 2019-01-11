@@ -302,9 +302,27 @@ public class UserController {
     @RequestMapping(value = "deleteNew", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> deleteNew(@RequestParam Long newsId) {
+        userService.deleteNews(newsId);
         log.info("用户删除消息------------------------------------");
         return ResponseDataUtil.
                 ok().
+                build();
+    }
+
+    /**
+     * 通过用户ID查找用户
+     *
+     * @param userId
+     * @return
+     */
+    @RequestMapping(value = "getUser", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getUser(@RequestParam Long userId) {
+         User user=userService.findUserByUserId(userId);
+        log.info("通过用户ID查找用户------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataResult", user).
                 build();
     }
 }

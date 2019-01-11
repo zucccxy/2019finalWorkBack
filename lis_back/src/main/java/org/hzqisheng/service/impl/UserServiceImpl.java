@@ -1,13 +1,12 @@
 package org.hzqisheng.service.impl;
 
-import org.lis_dao.CollectionDao;
-import org.lis_dao.FeedbackDao;
-import org.lis_dao.SignDao;
+import org.lis_dao.*;
 import org.lis_entity.*;
 
 import org.hzqisheng.service.UserService;
 import org.springframework.stereotype.Service;
-import org.lis_dao.UserDao;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.HashMap;
@@ -27,6 +26,8 @@ public class UserServiceImpl  implements UserService {
     FeedbackDao feedbackDao;
     @Resource
     CollectionDao collectionDao;
+    @Resource
+    NewsDao newsDao;
     @Override
     public List<User> findUserList(String userAccount, String userName, Integer userLevel) {
         UserExample userExample = new UserExample();
@@ -98,5 +99,20 @@ public class UserServiceImpl  implements UserService {
     @Override
     public boolean delCollection(Long collectionId) {
         return collectionDao.deleteByPrimaryKey(collectionId) > 0;
+    }
+
+    @Override
+    public List<NewsResult> findNewsResult(String username, Integer status, Date startTime, Date endTime) {
+        HashMap<String,Object> map=new HashMap<>();
+        map.put("username",username);
+        map.put("status",status);
+        map.put("startTime",startTime);
+        map.put("endTime",endTime);
+        return userDao.selectNewsByCollectionCondition(map);
+    }
+
+    @Override
+    public boolean delNew(Long newsId) {
+        return  newsDao.deleteByPrimaryKey(newsId) > 0;
     }
 }

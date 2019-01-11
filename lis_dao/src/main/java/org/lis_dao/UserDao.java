@@ -37,4 +37,6 @@ public interface UserDao {
 
     List<CollectionResult> selectAllCollectionResultByUserId(Long userId);
 
+    List<NewsResult> selectNewsByCollectionCondition(HashMap map);
+
 }

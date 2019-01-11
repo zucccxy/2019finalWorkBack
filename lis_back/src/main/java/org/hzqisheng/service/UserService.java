@@ -1,9 +1,6 @@
 package org.hzqisheng.service;
 
-import org.lis_entity.CollectionResult;
-import org.lis_entity.FeedbackResult;
-import org.lis_entity.SignResult;
-import org.lis_entity.User;
+import org.lis_entity.*;
 
 import java.util.Date;
 import java.util.List;
@@ -90,4 +87,21 @@ public interface UserService {
      * @return
      */
     public boolean delCollection(Long  collectionId);
+
+    /**
+     * 获取消息列表
+     * @param username
+     * @param status
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    public List<NewsResult> findNewsResult(String username,Integer status,Date startTime,Date endTime);
+
+    /**
+     * 删除消息记录
+     * @param newsId
+     * @return
+     */
+    public boolean delNew(Long newsId);
 }

@@ -1,14 +1,15 @@
 package org.hzqisheng.service.impl;
 
 import org.hzqisheng.service.AdminService;
-import org.lis_dao.AdminDao;
-import org.lis_entity.Admin;
-import org.lis_entity.AdminExample;
+import org.lis_dao.*;
+import org.lis_entity.*;
 import org.springframework.stereotype.Service;
 import org.util.StringUtil;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Auther: cxy
@@ -18,7 +19,18 @@ import java.util.List;
 public class AdminServiceImpl implements AdminService {
     @Resource
     AdminDao adminDao;
-
+    @Resource
+    ArticleDao articleDao;
+    @Resource
+    UserDao userDao;
+    @Resource
+    CommentDao commentDao;
+    @Resource
+    ReplayDao replayDao;
+    @Resource
+    CategoryDao categoryDao;
+    @Resource
+    ArticleCategoryDao articleCategoryDao;
     @Override
     public List<Admin> findAdminList(String adminPhone, String adminName, Integer adminState) {
         AdminExample adminExample = new AdminExample();
@@ -74,5 +86,37 @@ public class AdminServiceImpl implements AdminService {
         Admin admin = adminDao.selectByPrimaryKey(adminId);
         admin.setAdminState(2);
         return adminDao.updateByPrimaryKeySelective(admin) > 0;
+    }
+
+    @Override
+    public Map<String, Long> getCount() {
+        Map<String,Long> countResult=new HashMap<>();
+        ArticleExample articleExample=new ArticleExample();
+        countResult.put("articleNumber",articleDao.countByExample(articleExample));
+        UserExample userExample=new UserExample();
+        countResult.put("userNumber",userDao.countByExample(userExample));
+        CommentExample commentExample=new CommentExample();
+        countResult.put("commentNumber",commentDao.countByExample(commentExample));
+        ReplayExample replayExample=new ReplayExample();
+        countResult.put("replyNumber",replayDao.countByExample(replayExample));
+        return countResult;
+    }
+
+    @Override
+    public List<ArticleResult> getArticleList() {
+        return articleDao.selectAllArticleResultList();
+    }
+    @Override
+    public Map<String, Long> countCategoryName() {
+        Map<String,Long> countResult=new HashMap<>();
+        CategoryExample categoryExample=new CategoryExample();
+        List<Category> categoryList=categoryDao.selectByExample(categoryExample);
+        for(Category category :categoryList){
+            ArticleCategoryExample articleCategoryExample=new ArticleCategoryExample();
+            ArticleCategoryExample.Criteria criteria=articleCategoryExample.createCriteria();
+            criteria.andCategoryIdEqualTo(category.getCategoryId());
+            countResult.put(category.getCategoryName(),articleCategoryDao.countByExample(articleCategoryExample));
+        }
+        return countResult;
     }
 }

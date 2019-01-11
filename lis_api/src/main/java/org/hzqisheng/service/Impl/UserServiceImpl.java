@@ -153,4 +153,9 @@ public class UserServiceImpl implements UserService{
     public boolean deleteNews(Long newsId) {
         return newsDao.deleteByPrimaryKey(newsId) > 0;
     }
+
+    @Override
+    public User findUserByUserId(Long userId) {
+        return userDao.selectByPrimaryKey(userId);
+    }
 }

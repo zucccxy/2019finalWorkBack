@@ -6,12 +6,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.enums.ResponseCodeEnum;
 import org.hzqisheng.service.AdminService;
 import org.lis_entity.Admin;
+import org.lis_entity.ArticleResult;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.tags.form.RadioButtonsTag;
 import org.util.EnumState;
 import org.util.MD5;
 import org.util.StringUtil;
@@ -249,30 +251,31 @@ public class AdminController {
 
     /**
      * 修改超级管理员密码
+     *
      * @param newPwd
      * @param oldPwd
      * @param session
      * @return
      */
-    @RequestMapping(value="changePwd",method = RequestMethod.POST)
+    @RequestMapping(value = "changePwd", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> changePwd(String newPwd,String oldPwd,HttpSession session){
-        if(StringUtil.isBlank(newPwd)){
+    public Map<String, Object> changePwd(String newPwd, String oldPwd, HttpSession session) {
+        if (StringUtil.isBlank(newPwd)) {
             return ResponseDataUtil.
                     fail("新密码不能为空！").
                     build();
         }
-        if(StringUtil.isBlank(oldPwd)){
-            return  ResponseDataUtil.
+        if (StringUtil.isBlank(oldPwd)) {
+            return ResponseDataUtil.
                     fail("旧密码不能为空！").
                     build();
         }
         Admin currAdmin = (Admin) session.getAttribute("currAdmin");
-        MD5 md5=new MD5();
-        String currAdminPassword=currAdmin.getAdminPwd();
-        String oldPassword=md5.getStrToMD5(oldPwd);
+        MD5 md5 = new MD5();
+        String currAdminPassword = currAdmin.getAdminPwd();
+        String oldPassword = md5.getStrToMD5(oldPwd);
         log.info("管理员密码修改------------------------------------");
-        if(!currAdminPassword.equals(oldPassword)){
+        if (!currAdminPassword.equals(oldPassword)) {
             return ResponseDataUtil.
                     fail("旧密码输入错误！").
                     build();
@@ -286,33 +289,82 @@ public class AdminController {
 
     /**
      * 判断当前管理员是否登录
+     *
      * @param admin
      * @param session
      * @return
      */
-    @RequestMapping(value="checkLogin",method = RequestMethod.GET)
+    @RequestMapping(value = "checkLogin", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object> checkLogin(Admin admin,HttpSession session){
+    public Map<String, Object> checkLogin(Admin admin, HttpSession session) {
         log.info("判断管理员是否登录------------------------------------");
-        if(session.getAttribute("currAdmin")== null){
+        if (session.getAttribute("currAdmin") == null) {
             return ResponseDataUtil.fail().build();
-        }
-        else{
+        } else {
             return ResponseDataUtil.ok().build();
         }
     }
 
     /**
      * 管理员退出登录
+     *
      * @param session
      * @return
      */
-    @RequestMapping(value="logOut",method = RequestMethod.GET)
+    @RequestMapping(value = "logOut", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String,Object> logOut(HttpSession session){
+    public Map<String, Object> logOut(HttpSession session) {
         log.info("管理员退出登录------------------------------------");
-        session.setAttribute("currAdmin",null);
+        session.setAttribute("currAdmin", null);
         return ResponseDataUtil.ok().build();
+    }
+
+    /**
+     * 获取统计数据
+     *
+     * @return
+     */
+    @RequestMapping(value = "getCount", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getCount() {
+        Map<String, Long> countResult = adminService.getCount();
+        log.info("------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataMap", countResult).
+                build();
+    }
+
+    /**
+     * 获取文章列表
+     *
+     * @return
+     */
+    @RequestMapping(value = "getArticleList", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getArticleList() {
+        List<ArticleResult> articleResultList = adminService.getArticleList();
+        log.info("获取文章列表------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataList", articleResultList).
+                build();
+    }
+
+    /**
+     * 统计各类别的文章数
+     *
+     * @return
+     */
+    @RequestMapping(value = "getCategoryCountResult", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getCategoryCountResult() {
+        Map<String,Long> countResult=adminService.countCategoryName();
+        log.info("统计各类别的文章数------------------------------------");
+        return ResponseDataUtil.
+                ok().
+                putData("dataMap", countResult).
+                build();
     }
 
 }

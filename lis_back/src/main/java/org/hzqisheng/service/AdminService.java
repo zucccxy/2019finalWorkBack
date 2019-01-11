@@ -1,8 +1,10 @@
 package org.hzqisheng.service;
 
 import org.lis_entity.Admin;
+import org.lis_entity.ArticleResult;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 管理员service
@@ -64,4 +66,20 @@ public interface AdminService {
      */
     public boolean delAdmin(Long adminId);
 
+    /**
+     * 获取统计结果
+     * @return
+     */
+    public Map<String,Long> getCount();
+
+    /**
+     * 获取所有文章
+     */
+    public List<ArticleResult> getArticleList();
+
+    /**
+     * 统计各文章
+     * @return
+     */
+    public Map<String,Long> countCategoryName();
 }
