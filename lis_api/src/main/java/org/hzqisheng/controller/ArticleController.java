@@ -40,7 +40,7 @@ public class ArticleController {
     @ResponseBody
     public Map<String, Object> categoryList() {
         List<Category> categoryListList = articleService.findCategoryList();
-        log.info("用户注册------------------------------------");
+        log.info("获取标签列表------------------------------------");
         return ResponseDataUtil.
                 ok().
                 putData("dataList", categoryListList).
