@@ -2,8 +2,6 @@ package org.hzqisheng.backTask;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
 import org.hzqisheng.service.GithubService;
 import org.lis_entity.GithubProject;
@@ -11,8 +9,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.util.OkHttpUtil;
-import sun.misc.BASE64Decoder;
-import sun.plugin.javascript.navig.Array;
 
 import javax.annotation.Resource;
 import java.util.*;

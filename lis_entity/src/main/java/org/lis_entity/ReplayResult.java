@@ -15,8 +15,10 @@ public class ReplayResult {
      * 回复内容
      */
     private String replyContent;
-
-
+    /**
+     * 用户头像
+     */
+    private String  avatarurl;
     /**
      * 用户名
      */
@@ -30,6 +32,7 @@ public class ReplayResult {
      * 被回复人姓名
      */
     private String repliedName;
+
 
 
     public ReplayResult() {
@@ -48,6 +51,14 @@ public class ReplayResult {
 
     public void setReplyId(Long replyId) {
         this.replyId = replyId;
+    }
+
+    public String getAvatarurl() {
+        return avatarurl;
+    }
+
+    public void setAvatarurl(String avatarurl) {
+        this.avatarurl = avatarurl;
     }
 
     public String getReplyContent() {

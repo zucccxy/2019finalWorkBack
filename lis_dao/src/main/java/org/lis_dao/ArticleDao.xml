@@ -339,7 +339,7 @@ where  article_category.category_id = #{categoryId}
   </select>
 
   <select id="selectReplayListByCommentId" parameterType="java.lang.Long" resultType="org.lis_entity.ReplayResult">
-     select reply_id as replyId,reply_content as replyContent,username,replay.create_time as createTime,replied_name as repliedName
+     select reply_id as replyId,reply_content as replyContent,avatarUrl as avatarurl,username,replay.create_time as createTime,replied_name as repliedName
     from replay inner join user on replay.user_id = user.user_id inner join comment on replay.comment_id = comment.comment_id
     where replay.comment_id = #{commentId}
     order by replay.create_time
