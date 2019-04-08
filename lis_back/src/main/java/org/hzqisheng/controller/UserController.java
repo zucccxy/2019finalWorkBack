@@ -161,7 +161,7 @@ public class UserController {
      *
      * @param pageIndex
      * @param pageSize
-     * @param username
+     * @param feedbackContent
      * @param startTime
      * @param endTime
      * @return
@@ -169,10 +169,10 @@ public class UserController {
     @RequestMapping(value = "feedbackList", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> findFeedbackList(@RequestParam(defaultValue = "1") Integer pageIndex, @RequestParam(defaultValue = "10") Integer pageSize,
-                                                String username, Date startTime, Date endTime) {
+                                                String feedbackContent, Date startTime, Date endTime) {
         PageHelper.startPage(pageIndex, pageSize);
-        List<FeedbackResult> feedbackList = userService.findFeedbackList(username, startTime, endTime);
-        Page<FeedbackResult> page = (Page<FeedbackResult>) feedbackList;
+        List<Feedback> feedbackList = userService.findFeedbackList(feedbackContent, startTime, endTime);
+        Page<Feedback> page = (Page<Feedback>) feedbackList;
         log.info("用户反馈列表查询------------------------------------");
         return ResponseDataUtil.
                 ok().

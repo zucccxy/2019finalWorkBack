@@ -101,11 +101,17 @@ public class ArticleController {
     @RequestMapping(value="delArticle",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> delArticle(Long articleId){
-        articleService.delArticle(articleId);
-        log.info("删除文章------------------------------------");
-        return ResponseDataUtil.
-                ok().
-                build();
+       if(articleService.delArticle(articleId)) {
+           log.info("删除文章成功------------------------------------");
+           return ResponseDataUtil.
+                   ok().
+                   build();
+       }else{
+           log.info("删除文章失败------------------------------------");
+           return ResponseDataUtil.
+                   fail().
+                   build();
+       }
     }
     /**
      * 评论列表

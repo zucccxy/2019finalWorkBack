@@ -57,12 +57,12 @@ public interface UserService {
 
     /**
      * 获取反馈列表
-     * @param username
+     * @param feedbackContent
      * @param startTime
      * @param endTime
      * @return
      */
-    public List<FeedbackResult> findFeedbackList(String username,Date startTime,Date endTime);
+    public List<Feedback> findFeedbackList(String feedbackContent,Date startTime,Date endTime);
 
     /**
      * 删除反馈记录

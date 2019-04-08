@@ -22,4 +22,27 @@ public interface CategoryService {
      */
     public List<Category> findCatergoryList(Long articleId);
 
+    /**
+     * 通过博文标签名称查找标签
+     * @param categoryName
+     * @return
+     */
+    public List<Category> findCategoryListByCategoryName(String categoryName);
+
+    /**
+     * 添加博文标签
+     * @param category
+     * @return
+     */
+    public boolean addCategory(Category category);
+
+    /**
+     * 修改博文标签信息
+     * @param category
+     * @return
+     */
+    public boolean updateCategory(Category category);
+
+    public boolean deleteCategory(Long categoryId);
+
 }

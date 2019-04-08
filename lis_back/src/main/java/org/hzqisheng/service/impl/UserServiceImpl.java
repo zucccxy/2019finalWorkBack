@@ -73,12 +73,19 @@ public class UserServiceImpl  implements UserService {
     }
 
     @Override
-    public List<FeedbackResult> findFeedbackList(String username, Date startTime, Date endTime) {
-       HashMap<String,Object> map=new HashMap<>();
-        map.put("username",username);
-        map.put("startTime",startTime);
-        map.put("endTime",endTime);
-       return userDao.selectByFeedbackCondition(map);
+    public List<Feedback> findFeedbackList(String feedbackContent, Date startTime, Date endTime) {
+       FeedbackExample feedbackExample=new FeedbackExample();
+       FeedbackExample.Criteria criteria=feedbackExample.createCriteria();
+       if(null != feedbackContent &&  !"".equals(feedbackContent)){
+           criteria.andFeedbackContentLike("%"+feedbackContent+"%");
+       }
+       if(startTime != null ){
+           criteria.andCreatTimeGreaterThanOrEqualTo(startTime);
+       }
+       if(endTime !=null){
+           criteria.andCreatTimeLessThanOrEqualTo(endTime);
+       }
+       return feedbackDao.selectByExample(feedbackExample);
     }
 
     @Override

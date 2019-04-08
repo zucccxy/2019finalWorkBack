@@ -51,5 +51,35 @@ public class CategoryServiceImpl implements CategoryService {
             return null;
         }
     }
+
+    @Override
+    public List<Category> findCategoryListByCategoryName(String categoryName) {
+        CategoryExample categoryExample=new CategoryExample();
+        CategoryExample.Criteria criteria=categoryExample.createCriteria();
+        if (null != categoryName && !"".equals(categoryName))
+            criteria.andCategoryNameLike("%" + categoryName + "%");
+        categoryExample.setOrderByClause("category_name");
+        return categoryDao.selectByExample(categoryExample);
+    }
+
+    @Override
+    public boolean addCategory(Category category) {
+
+        return categoryDao.insertSelective(category) > 0;
+    }
+
+    @Override
+    public boolean updateCategory(Category category) {
+        return categoryDao.updateByPrimaryKeySelective(category) > 0   ;
+    }
+
+    @Override
+    public boolean deleteCategory(Long categoryId) {
+        ArticleCategoryExample articleCategoryExample=new ArticleCategoryExample();
+        ArticleCategoryExample.Criteria criteria=articleCategoryExample.createCriteria();
+        criteria.andCategoryIdEqualTo(categoryId);
+        articleCategoryDao.deleteByExample(articleCategoryExample);
+        return categoryDao.deleteByPrimaryKey(categoryId) > 0;
+    }
 }
 
